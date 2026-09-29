@@ -1,0 +1,62 @@
+[pgd-table] gate_robust s0 eps=1/255: AUROC=0.0001
+[pgd-table] gate_robust s0 eps=2/255: AUROC=0.0000
+[pgd-table] gate_robust s0 eps=4/255: AUROC=0.0001
+[pgd-table] gate_robust s0 eps=8/255: AUROC=0.0000
+[pgd-table] wrote /workspace/df-fusion/results/pgd_reeval.json
+[pgd-table] gate_robust s1 eps=1/255: AUROC=0.0000
+[pgd-table] gate_robust s1 eps=2/255: AUROC=0.0000
+[pgd-table] gate_robust s1 eps=4/255: AUROC=0.0000
+[pgd-table] gate_robust s1 eps=8/255: AUROC=0.0000
+[pgd-table] wrote /workspace/df-fusion/results/pgd_reeval.json
+[pgd-table] gate_robust s2 eps=1/255: AUROC=0.0000
+[pgd-table] gate_robust s2 eps=2/255: AUROC=0.0000
+[pgd-table] gate_robust s2 eps=4/255: AUROC=0.0000
+[pgd-table] gate_robust s2 eps=8/255: AUROC=0.0000
+[pgd-table] wrote /workspace/df-fusion/results/pgd_reeval.json
+[pgd-table] gate_srr s0 eps=1/255: AUROC=0.0000
+[pgd-table] gate_srr s0 eps=2/255: AUROC=0.0000
+[pgd-table] gate_srr s0 eps=4/255: AUROC=0.0000
+[pgd-table] gate_srr s0 eps=8/255: AUROC=0.0000
+[pgd-table] wrote /workspace/df-fusion/results/pgd_reeval.json
+[pgd-table] gate_srr s1 eps=1/255: AUROC=0.0000
+[pgd-table] gate_srr s1 eps=2/255: AUROC=0.0000
+[pgd-table] gate_srr s1 eps=4/255: AUROC=0.0000
+[pgd-table] gate_srr s1 eps=8/255: AUROC=0.0000
+[pgd-table] wrote /workspace/df-fusion/results/pgd_reeval.json
+[pgd-table] gate_srr s2 eps=1/255: AUROC=0.0001
+[pgd-table] gate_srr s2 eps=2/255: AUROC=0.0000
+[pgd-table] gate_srr s2 eps=4/255: AUROC=0.0000
+[pgd-table] gate_srr s2 eps=8/255: AUROC=0.0000
+[pgd-table] wrote /workspace/df-fusion/results/pgd_reeval.json
+[pgd-table] gate_full s0 eps=1/255: AUROC=0.0001
+[pgd-table] gate_full s0 eps=2/255: AUROC=0.0000
+[pgd-table] gate_full s0 eps=4/255: AUROC=0.0000
+[pgd-table] gate_full s0 eps=8/255: AUROC=0.0000
+[pgd-table] wrote /workspace/df-fusion/results/pgd_reeval.json
+[pgd-table] gate_full s1 eps=1/255: AUROC=0.0003
+[pgd-table] gate_full s1 eps=2/255: AUROC=0.0000
+[pgd-table] gate_full s1 eps=4/255: AUROC=0.0000
+[pgd-table] gate_full s1 eps=8/255: AUROC=0.0000
+[pgd-table] wrote /workspace/df-fusion/results/pgd_reeval.json
+[pgd-table] gate_full s2 eps=1/255: AUROC=0.0001
+[pgd-table] gate_full s2 eps=2/255: AUROC=0.0000
+[pgd-table] gate_full s2 eps=4/255: AUROC=0.0000
+[pgd-table] gate_full s2 eps=8/255: AUROC=0.0000
+[pgd-table] wrote /workspace/df-fusion/results/pgd_reeval.json
+[modern-pgd] semantic_tc s0 Midjourney: 0.3879 -> 0.0000
+[modern-pgd] semantic_tc s0 stable_diffusion_v_1_5: 0.4453 -> 0.0000
+[nb-3c26f892-ce03-467f-b7b0-8915efdf251c-8677f467bc-7grww:528014:0:528150] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[1788845306.382158] [nb-3c26f892-ce03-467f-b7b0-8915efdf251c-8677f467bc-7grww:528014:1]           debug.c:1297 UCX  WARN  ucs_debug_disable_signal: signal 8 was not set in ucs
+[1788845306.382201] [nb-3c26f892-ce03-467f-b7b0-8915efdf251c-8677f467bc-7grww:528014:1]        spinlock.c:29   UCX  WARN  ucs_recursive_spinlock_destroy() failed: busy
+[nb-3c26f892-ce03-467f-b7b0-8915efdf251c-8677f467bc-7grww:528014:1:528149] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[1788845306.382204] [nb-3c26f892-ce03-467f-b7b0-8915efdf251c-8677f467bc-7grww:528014:2]           debug.c:1297 UCX  WARN  ucs_debug_disable_signal: signal 11 was not set in ucs
+[1788845306.382234] [nb-3c26f892-ce03-467f-b7b0-8915efdf251c-8677f467bc-7grww:528014:2]        spinlock.c:29   UCX  WARN  ucs_recursive_spinlock_destroy() failed: busy
+[nb-3c26f892-ce03-467f-b7b0-8915efdf251c-8677f467bc-7grww:528014:2:528145] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[1788845306.382230] [nb-3c26f892-ce03-467f-b7b0-8915efdf251c-8677f467bc-7grww:528014:1]        spinlock.c:29   UCX  WARN  ucs_recursive_spinlock_destroy() failed: busy
+[1788845306.382212] [nb-3c26f892-ce03-467f-b7b0-8915efdf251c-8677f467bc-7grww:528014:0]        spinlock.c:29   UCX  WARN  ucs_recursive_spinlock_destroy() failed: busy
+[1788845306.382237] [nb-3c26f892-ce03-467f-b7b0-8915efdf251c-8677f467bc-7grww:528014:3]           debug.c:1297 UCX  WARN  ucs_debug_disable_signal: signal 8 was not set in ucs
+[nb-3c26f892-ce03-467f-b7b0-8915efdf251c-8677f467bc-7grww:528014:3:528156] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid: 528145) ====
+ 0 0x0000000000042520 __sigaction()  ???:0
+=================================
+artifact/src/run_pgd_queue.sh: line 13: 528014 Segmentation fault      (core dumped) python3 artifact/src/new_experiments.py modern-pgd --n 1000 --methods semantic_tc,gate_full --seeds 0 --generators Midjourney,stable_diffusion_v_1_5 --eps 4 --steps 40

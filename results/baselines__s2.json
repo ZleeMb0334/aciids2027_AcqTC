@@ -1,0 +1,218 @@
+[
+ {
+  "method": "cnndetection",
+  "seed": 2,
+  "provenance": {
+   "paper": "Wang et al., CVPR 2020 (CNNDetection)",
+   "code": "github.com/PeterWang512/CNNDetection",
+   "code_commit": "ea0b5622365e3a9cd31d1b54b6b5971131a839ab",
+   "weights": "official blur_jpg_prob0.5.pth",
+   "weights_sha256": "3533f3e58a3b82215f21197f2faf4e99b911ec42a4a6e2d7823e04d5f3fd245a",
+   "provenance": "official code + official weights"
+  },
+  "params": 23510081,
+  "train_s": 1.0868051052093506,
+  "per_generator": {
+   "progan": {
+    "auroc": 1.0,
+    "ap": 1.0,
+    "shortcut_auroc": 0.4736
+   },
+   "deepfake": {
+    "auroc": 0.663408,
+    "ap": 0.6683721848239246,
+    "shortcut_auroc": 0.5184
+   },
+   "biggan": {
+    "auroc": 0.9036219999999999,
+    "ap": 0.8836591373237634,
+    "shortcut_auroc": 0.521
+   },
+   "gaugan": {
+    "auroc": 0.979274,
+    "ap": 0.9769930745191583,
+    "shortcut_auroc": 0.544
+   },
+   "cyclegan": {
+    "auroc": 0.971374,
+    "ap": 0.9711357750575204,
+    "shortcut_auroc": 0.6308
+   },
+   "stylegan": {
+    "auroc": 0.983915,
+    "ap": 0.9850679009121667,
+    "shortcut_auroc": 0.6396
+   }
+  },
+  "auroc_progan": 1.0,
+  "auroc_unseen_macro": 0.9003186,
+  "auroc_macro": 0.9169321666666667,
+  "gap": 0.09968140000000003,
+  "a4_jpeg70_auroc": 1.0,
+  "a4_jpeg70_psnr": 32.9586067199707,
+  "a4_resize_auroc": 0.999992,
+  "a4_resize_psnr": 25.965839385986328
+ },
+ {
+  "method": "ufd",
+  "seed": 2,
+  "provenance": {
+   "paper": "Ojha et al., CVPR 2023 (UniversalFakeDetect)",
+   "code": "github.com/WisconsinAIVision/UniversalFakeDetect",
+   "code_commit": "030495aea3300a8b54c0ec37ec7fe1dd7e63c619",
+   "weights": "official fc_weights.pth",
+   "provenance": "official code + official weights",
+   "weights_sha256": "477100745713bcc957beb2b40859536859b6483fd6301b3b9293151b194c7847"
+  },
+  "params": 303966977,
+  "train_s": 4.107370853424072,
+  "per_generator": {
+   "progan": {
+    "auroc": 0.999993,
+    "ap": 0.9999930039860099,
+    "shortcut_auroc": 0.4736
+   },
+   "deepfake": {
+    "auroc": 0.796274,
+    "ap": 0.8148331668353536,
+    "shortcut_auroc": 0.5184
+   },
+   "biggan": {
+    "auroc": 0.9905539999999999,
+    "ap": 0.9915350197152575,
+    "shortcut_auroc": 0.521
+   },
+   "gaugan": {
+    "auroc": 0.999687,
+    "ap": 0.999684160870674,
+    "shortcut_auroc": 0.544
+   },
+   "cyclegan": {
+    "auroc": 0.9978370000000001,
+    "ap": 0.9979017156240734,
+    "shortcut_auroc": 0.6308
+   },
+   "stylegan": {
+    "auroc": 0.9732789999999999,
+    "ap": 0.9756902920303522,
+    "shortcut_auroc": 0.6396
+   }
+  },
+  "auroc_progan": 0.999993,
+  "auroc_unseen_macro": 0.9515262,
+  "auroc_macro": 0.959604,
+  "gap": 0.04846680000000003,
+  "a4_jpeg70_auroc": 0.998352,
+  "a4_jpeg70_psnr": 32.9586067199707,
+  "a4_resize_auroc": 0.997728,
+  "a4_resize_psnr": 25.965839385986328
+ },
+ {
+  "method": "npr",
+  "seed": 2,
+  "provenance": {
+   "paper": "Tan et al., CVPR 2024 (NPR)",
+   "code": "github.com/chuangchuangtan/NPR-DeepfakeDetection",
+   "code_commit": "781ced3f7ca2cdc69ec9dd4ef27e8d0b3c07752a",
+   "weights": "official NPR.pth",
+   "provenance": "official code + official weights",
+   "weights_sha256": "3939297e9399e0b992f87211610769d87d899de50d56da0204d6cbda2d483a53"
+  },
+  "params": 1437761,
+  "train_s": 0.0554046630859375,
+  "per_generator": {
+   "progan": {
+    "auroc": 0.99999,
+    "ap": 0.9999900802775025,
+    "shortcut_auroc": 0.4736
+   },
+   "deepfake": {
+    "auroc": 0.922998,
+    "ap": 0.9343527561771683,
+    "shortcut_auroc": 0.5184
+   },
+   "biggan": {
+    "auroc": 0.929624,
+    "ap": 0.9107786401763577,
+    "shortcut_auroc": 0.521
+   },
+   "gaugan": {
+    "auroc": 0.900501,
+    "ap": 0.8531572653445955,
+    "shortcut_auroc": 0.544
+   },
+   "cyclegan": {
+    "auroc": 0.9893019999999999,
+    "ap": 0.986408412055864,
+    "shortcut_auroc": 0.6308
+   },
+   "stylegan": {
+    "auroc": 0.9984410000000001,
+    "ap": 0.9988401497743775,
+    "shortcut_auroc": 0.6396
+   }
+  },
+  "auroc_progan": 0.99999,
+  "auroc_unseen_macro": 0.9481732,
+  "auroc_macro": 0.9568093333333332,
+  "gap": 0.051816799999999996,
+  "a4_jpeg70_auroc": 0.527392,
+  "a4_jpeg70_psnr": 32.9586067199707,
+  "a4_resize_auroc": 0.666868,
+  "a4_resize_psnr": 25.965839385986328
+ },
+ {
+  "method": "freqnet",
+  "seed": 2,
+  "provenance": {
+   "paper": "Tan et al., AAAI 2024 (FreqNet)",
+   "code": "github.com/chuangchuangtan/FreqNet-DeepfakeDetection",
+   "code_commit": "2c6bd020cda1c0001e7a7d30ebd2dd5c55b5a8b6",
+   "weights": "official 4-classes-freqnet-v2.pth",
+   "weights_sha256": "606e9855637ab84db68279c44d34aa32b0ab0a5bb9af8d32fe5b398893900902",
+   "provenance": "official code + official weights"
+  },
+  "params": 1850433,
+  "train_s": 0.037839651107788086,
+  "per_generator": {
+   "progan": {
+    "auroc": 0.999985,
+    "ap": 0.999985027757208,
+    "shortcut_auroc": 0.4736
+   },
+   "deepfake": {
+    "auroc": 0.9690319999999999,
+    "ap": 0.9738640293571602,
+    "shortcut_auroc": 0.5184
+   },
+   "biggan": {
+    "auroc": 0.966033,
+    "ap": 0.9717407889766774,
+    "shortcut_auroc": 0.521
+   },
+   "gaugan": {
+    "auroc": 0.999486,
+    "ap": 0.9994960684043386,
+    "shortcut_auroc": 0.544
+   },
+   "cyclegan": {
+    "auroc": 0.997741,
+    "ap": 0.9976924498528117,
+    "shortcut_auroc": 0.6308
+   },
+   "stylegan": {
+    "auroc": 0.9985979999999999,
+    "ap": 0.9986400973262549,
+    "shortcut_auroc": 0.6396
+   }
+  },
+  "auroc_progan": 0.999985,
+  "auroc_unseen_macro": 0.986178,
+  "auroc_macro": 0.9884791666666667,
+  "gap": 0.013807000000000014,
+  "a4_jpeg70_auroc": 0.532376,
+  "a4_jpeg70_psnr": 32.9586067199707,
+  "a4_resize_auroc": 0.532552,
+  "a4_resize_psnr": 25.965839385986328
+ }
+]

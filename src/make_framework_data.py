@@ -1,0 +1,118 @@
+"""Real numbers and curves for Figure 1, emitted as LaTeX macros.
+
+Nothing in the figure is illustrative-only: the file-header values are read from
+actual benchmark files, and the radial spectra are computed from real images.
+"""
+import io, json, os, sys
+import numpy as np
+from PIL import Image, JpegImagePlugin
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import data as D
+import data_fs as FS
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUT = os.path.join(ROOT, "manuscript", "generated")
+IMG = os.path.join(ROOT, "manuscript", "images")
+os.makedirs(OUT, exist_ok=True)
+os.makedirs(IMG, exist_ok=True)
+
+
+def save_thumb(im, name, side=256):
+    """Save a square thumbnail for the figure. Cropped from the centre and
+    written as PNG so the figure never re-compresses the evidence it discusses."""
+    w, h = im.size
+    m = min(w, h)
+    im = im.crop(((w - m) // 2, (h - m) // 2, (w - m) // 2 + m, (h - m) // 2 + m))
+    im = im.resize((side, side), Image.LANCZOS)
+    path = os.path.join(IMG, name + ".png")
+    im.save(path)
+    return path
+M = {}
+
+
+def hdr(raw):
+    im = Image.open(io.BytesIO(raw))
+    w, h = im.size
+    q = getattr(im, "quantization", None)
+    return {"fmt": im.format, "w": w, "h": h,
+            "bpp": len(raw) * 8.0 / (w * h),
+            "qdc": (list(q[0])[0] if q else None)}, im.convert("RGB")
+
+
+def radial(im, nb=48, size=128):
+    """Azimuthally averaged log-magnitude spectrum of the high-pass residual."""
+    a = np.asarray(im.convert("L"), dtype=np.float64)
+    h, w = a.shape
+    t, l = (h - size) // 2, (w - size) // 2
+    a = a[max(t, 0):max(t, 0) + size, max(l, 0):max(l, 0) + size]
+    if a.shape != (size, size):
+        a = np.asarray(im.convert("L").resize((size, size)), dtype=np.float64)
+    k = np.array([[0, -1, 0], [-1, 4, -1], [0, -1, 0]], dtype=np.float64)
+    r = a.copy()
+    r[1:-1, 1:-1] = sum(k[i + 1, j + 1] * a[1 + i:h and size - 1 + i, 1 + j:size - 1 + j]
+                        for i in (-1, 0, 1) for j in (-1, 0, 1)
+                        if k[i + 1, j + 1] != 0)[:size - 2, :size - 2]
+    S = np.log(np.abs(np.fft.fftshift(np.fft.fft2(r))) + 1e-8)
+    yy, xx = np.mgrid[:size, :size]
+    rad = np.sqrt((xx - size // 2) ** 2 + (yy - size // 2) ** 2)
+    idx = (rad / rad.max() * (nb - 1)).astype(int)
+    return np.array([S[idx == b].mean() for b in range(nb)])
+
+
+def coords(v, lo=None, hi=None):
+    lo = v.min() if lo is None else lo
+    hi = v.max() if hi is None else hi
+    v = (v - lo) / max(hi - lo, 1e-9) * 100.0
+    return " ".join(f"({i},{x:.2f})" for i, x in enumerate(v))
+
+
+# ---------------------------------------------------------------- GenImage pair
+idx = D.build_index("test", cache=True)
+recs, store = idx["records"], D.ShardStore(idx["files"])
+rng = np.random.default_rng(0)
+sel = [i for i, r in enumerate(recs) if r["generator"] == "BigGAN"]
+real_i = next(i for i in sel if recs[i]["label"] == 0)
+fake_i = next(i for i in sel if recs[i]["label"] == 1)
+hr, imr = hdr(store.bytes_at(recs[real_i]["shard"], recs[real_i]["row"]))
+hf, imf = hdr(store.bytes_at(recs[fake_i]["shard"], recs[fake_i]["row"]))
+M["giRealFmt"], M["giFakeFmt"] = hr["fmt"], hf["fmt"]
+M["giRealDim"] = f"{hr['w']}$\\times${hr['h']}"
+M["giFakeDim"] = f"{hf['w']}$\\times${hf['h']}"
+M["giRealBpp"], M["giFakeBpp"] = f"{hr['bpp']:.2f}", f"{hf['bpp']:.2f}"
+M["giRealQ"] = str(hr["qdc"]) if hr["qdc"] else "--"
+save_thumb(imr, "ex_genimage_real"); save_thumb(imf, "ex_genimage_fake")
+M["giRealPath"] = recs[real_i]["image_path"] if "image_path" in recs[real_i] else "GenImage BigGAN nature"
+M["giFakePath"] = "GenImage BigGAN ai"
+M["giFakeQ"] = str(hf["qdc"]) if hf["qdc"] else "none"
+
+# ------------------------------------------------------------ ForenSynths pair
+fr, ff = FS._list(FS.TEST, "progan")
+hr2, imr2 = hdr(open(fr[0], "rb").read())
+hf2, imf2 = hdr(open(ff[0], "rb").read())
+M["fsRealFmt"], M["fsFakeFmt"] = hr2["fmt"], hf2["fmt"]
+M["fsRealDim"] = f"{hr2['w']}$\\times${hr2['h']}"
+M["fsFakeDim"] = f"{hf2['w']}$\\times${hf2['h']}"
+M["fsRealBpp"], M["fsFakeBpp"] = f"{hr2['bpp']:.2f}", f"{hf2['bpp']:.2f}"
+save_thumb(imr2, "ex_forensynths_real"); save_thumb(imf2, "ex_forensynths_fake")
+M["fsRealSrc"] = os.path.basename(os.path.dirname(os.path.dirname(fr[0])))
+M["fsFakeSrc"] = os.path.basename(os.path.dirname(os.path.dirname(ff[0])))
+
+# ------------------------------------------------- radial spectra, ForenSynths
+nr = min(120, len(fr)); nf = min(120, len(ff))
+R = np.mean([radial(Image.open(p)) for p in fr[:nr]], axis=0)
+F = np.mean([radial(Image.open(p)) for p in ff[:nf]], axis=0)
+lo, hi = min(R.min(), F.min()), max(R.max(), F.max())
+M["fwSpecReal"] = coords(R, lo, hi)
+M["fwSpecFake"] = coords(F, lo, hi)
+M["fwSpecN"] = str(len(R))
+M["fwSpecNimg"] = str(nr + nf)
+M["fwPeakGap"] = f"{float(np.abs(F - R).max()):.2f}"
+
+with open(os.path.join(OUT, "fig_framework_data.tex"), "w") as f:
+    f.write("% AUTO-GENERATED by artifact/src/make_framework_data.py -- do not edit\n")
+    for k, v in M.items():
+        f.write(f"\\newcommand{{\\{k}}}{{{v}}}\n")
+print(f"[fw] wrote {len(M)} macros")
+for k in ("giRealFmt", "giFakeFmt", "giRealDim", "giFakeDim", "giRealBpp", "giFakeBpp",
+          "fsRealFmt", "fsFakeFmt", "fsRealBpp", "fsFakeBpp", "fwPeakGap"):
+    print("   ", k, "=", M[k])

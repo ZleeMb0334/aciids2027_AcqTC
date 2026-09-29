@@ -1,0 +1,58 @@
+{
+  "experiment": "single-GPU inference benchmark",
+  "device": "NVIDIA H100 80GB HBM3",
+  "precision": "float32; autocast disabled",
+  "rows": [
+    {
+      "method": "semantic",
+      "seed": 0,
+      "checkpoint": "ckpt_fs__semantic__s0.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "batch_size": 64,
+      "warmup_iterations": 20,
+      "timed_iterations": 100,
+      "total_ms": 6100.7353515625,
+      "milliseconds_per_image": 0.9532398986816406,
+      "images_per_second": 1049.0538650165922,
+      "peak_allocated_bytes": 1076942336
+    },
+    {
+      "method": "semantic_tc",
+      "seed": 0,
+      "checkpoint": "ckpt_semtc__semantic_tc__s0.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "batch_size": 64,
+      "warmup_iterations": 20,
+      "timed_iterations": 100,
+      "total_ms": 6107.03759765625,
+      "milliseconds_per_image": 0.9542246246337891,
+      "images_per_second": 1047.971278653366,
+      "peak_allocated_bytes": 1076942336
+    },
+    {
+      "method": "gate_full",
+      "seed": 0,
+      "checkpoint": "ckpt_gatefull__gate_full__s0.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "batch_size": 64,
+      "warmup_iterations": 20,
+      "timed_iterations": 100,
+      "total_ms": 6725.41650390625,
+      "milliseconds_per_image": 1.0508463287353516,
+      "images_per_second": 951.6139255141683,
+      "peak_allocated_bytes": 1229064704
+    }
+  ]
+}

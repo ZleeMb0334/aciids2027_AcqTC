@@ -1,0 +1,78 @@
+[
+ {
+  "method": "gate_srr",
+  "seed": 0,
+  "trainable": 530307,
+  "params": 86683011,
+  "trainable_pct": 0.6117773181644556,
+  "breakdown": {
+   "ln_affine": 39936,
+   "backbone_total": 86192640,
+   "ln_pct_of_backbone": 0.046333422436068784,
+   "sem_head": 131585,
+   "noise_branch": 292993,
+   "fusion": 65793
+  },
+  "train_s": 158.66594076156616,
+  "per_generator": {
+   "progan": {
+    "auroc": 0.6935199999999999,
+    "ap": 0.6495260570905628,
+    "shortcut_auroc": 0.4736
+   },
+   "deepfake": {
+    "auroc": 0.44736,
+    "ap": 0.45838226325614817,
+    "shortcut_auroc": 0.5184
+   },
+   "biggan": {
+    "auroc": 0.649536,
+    "ap": 0.6341988457103128,
+    "shortcut_auroc": 0.521
+   },
+   "gaugan": {
+    "auroc": 0.5581119999999999,
+    "ap": 0.5260941213274154,
+    "shortcut_auroc": 0.544
+   },
+   "cyclegan": {
+    "auroc": 0.589024,
+    "ap": 0.5370160962657273,
+    "shortcut_auroc": 0.6308
+   },
+   "stylegan": {
+    "auroc": 0.505552,
+    "ap": 0.4852934418593019,
+    "shortcut_auroc": 0.6396
+   }
+  },
+  "auroc_macro": 0.5738506666666666,
+  "auroc_progan": 0.6935199999999999,
+  "auroc_unseen_macro": 0.5499167999999999,
+  "gap": 0.14360320000000004,
+  "a1_auroc": 0.6801333333333333,
+  "a1_psnr": 58.54981231689453,
+  "a2_radial_auroc": 0.6838666666666666,
+  "a2_radial_psnr": 47.96726608276367,
+  "a2_whiten_auroc": 0.6607111111111111,
+  "a2_whiten_psnr": 34.4007568359375,
+  "a2_resample_auroc": 0.5858666666666666,
+  "a2_resample_psnr": 27.201026916503906,
+  "a4_jpeg70_auroc": 0.5631555555555555,
+  "a4_jpeg70_psnr": 32.900089263916016,
+  "a4_resize_auroc": 0.4163555555555556,
+  "a4_resize_psnr": 26.044328689575195,
+  "a4_blur_auroc": 0.3892888888888889,
+  "a4_blur_psnr": 27.617740631103516,
+  "a3_eps1_auroc": 0.007466666666666669,
+  "a3_eps1_psnr": 51.31294250488281,
+  "a3_eps2_auroc": 0.00026666666666666766,
+  "a3_eps2_psnr": 45.67233657836914,
+  "a3_eps4_auroc": 0.0,
+  "a3_eps4_psnr": 39.96278762817383,
+  "a3_eps8_auroc": 0.0,
+  "a3_eps8_psnr": 34.21186828613281,
+  "H_w": 4.043188063085895,
+  "H_max": 4.1588830833596715
+ }
+]

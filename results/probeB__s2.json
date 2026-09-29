@@ -1,0 +1,81 @@
+[
+ {
+  "method": "semantic",
+  "seed": 2,
+  "trainable": 131585,
+  "params": 86324225,
+  "trainable_pct": 0.1524311396945643,
+  "breakdown": {
+   "ln_affine": 0,
+   "backbone_total": 86192640,
+   "ln_pct_of_backbone": 0.0,
+   "sem_head": 131585,
+   "noise_branch": 292993,
+   "fusion": 0
+  },
+  "train_s": 101.53187870979309,
+  "per_generator": {
+   "progan": {
+    "auroc": 0.999791,
+    "ap": 0.9997899383438741,
+    "shortcut_auroc": 0.4736
+   },
+   "deepfake": {
+    "auroc": 0.7433810000000001,
+    "ap": 0.7271022698388991,
+    "shortcut_auroc": 0.5184
+   },
+   "biggan": {
+    "auroc": 0.9299910000000001,
+    "ap": 0.9277251928134836,
+    "shortcut_auroc": 0.521
+   },
+   "gaugan": {
+    "auroc": 0.988772,
+    "ap": 0.9892220176448956,
+    "shortcut_auroc": 0.544
+   },
+   "cyclegan": {
+    "auroc": 0.972954,
+    "ap": 0.973117027540851,
+    "shortcut_auroc": 0.6308
+   },
+   "stylegan": {
+    "auroc": 0.916627,
+    "ap": 0.9214278551660856,
+    "shortcut_auroc": 0.6396
+   }
+  },
+  "auroc_macro": 0.9252526666666667,
+  "auroc_progan": 0.999791,
+  "auroc_unseen_macro": 0.9103450000000001,
+  "gap": 0.08944599999999991,
+  "a1_auroc": 0.9998239999999999,
+  "a1_psnr": 67.75529479980469,
+  "a2_radial_auroc": 0.999776,
+  "a2_radial_psnr": 49.68111038208008,
+  "a2_whiten_auroc": 0.998688,
+  "a2_whiten_psnr": 35.58811569213867,
+  "a2_resample_auroc": 0.967224,
+  "a2_resample_psnr": 27.12413787841797,
+  "a4_jpeg70_auroc": 0.891136,
+  "a4_jpeg70_psnr": 32.9586067199707,
+  "a4_resize_auroc": 0.9568880000000001,
+  "a4_resize_psnr": 25.965839385986328,
+  "a4_blur_auroc": 0.97692,
+  "a4_blur_psnr": 27.534399032592773,
+  "a3_eps1_auroc": 0.0009920000000000003,
+  "a3_eps1_psnr": 50.42983627319336,
+  "a3_eps2_auroc": 1.2000000000000012e-05,
+  "a3_eps2_psnr": 45.08529281616211,
+  "a3_eps4_auroc": 4.000000000000004e-06,
+  "a3_eps4_psnr": 39.54131317138672,
+  "a3_eps8_auroc": 0.0,
+  "a3_eps8_psnr": 33.861289978027344,
+  "H_w": 4.041721194641038,
+  "H_max": 4.1588830833596715,
+  "instantiated_trainable": 424578,
+  "instantiated_params": 86617218,
+  "parameter_scope": "active semantic deployment path"
+ }
+]

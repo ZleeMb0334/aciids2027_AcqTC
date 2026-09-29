@@ -1,0 +1,230 @@
+[
+ {
+  "method": "concat",
+  "seed": 0,
+  "trainable": 530307,
+  "params": 86683011,
+  "trainable_pct": 0.6117773181644556,
+  "breakdown": {
+   "ln_affine": 39936,
+   "backbone_total": 86192640,
+   "ln_pct_of_backbone": 0.046333422436068784,
+   "sem_head": 131585,
+   "noise_branch": 292993,
+   "fusion": 65793
+  },
+  "train_s": 119.00483083724976,
+  "per_generator": {
+   "progan": {
+    "auroc": 0.999994,
+    "ap": 0.9999939909689006,
+    "shortcut_auroc": 0.4736
+   },
+   "deepfake": {
+    "auroc": 0.8399760000000001,
+    "ap": 0.8349344733088069,
+    "shortcut_auroc": 0.5184
+   },
+   "biggan": {
+    "auroc": 0.983441,
+    "ap": 0.9844301694313933,
+    "shortcut_auroc": 0.521
+   },
+   "gaugan": {
+    "auroc": 0.998481,
+    "ap": 0.9980337654270993,
+    "shortcut_auroc": 0.544
+   },
+   "cyclegan": {
+    "auroc": 0.987092,
+    "ap": 0.9861360917670015,
+    "shortcut_auroc": 0.6308
+   },
+   "stylegan": {
+    "auroc": 0.9805290000000001,
+    "ap": 0.9812342040143972,
+    "shortcut_auroc": 0.6396
+   }
+  },
+  "auroc_macro": 0.9649188333333333,
+  "auroc_progan": 0.999994,
+  "auroc_unseen_macro": 0.9579038000000001,
+  "gap": 0.042090199999999967,
+  "a1_auroc": 0.999984,
+  "a1_psnr": 65.37467956542969,
+  "a2_radial_auroc": 0.999984,
+  "a2_radial_psnr": 42.75564956665039,
+  "a2_whiten_auroc": 0.999908,
+  "a2_whiten_psnr": 39.034976959228516,
+  "a2_resample_auroc": 0.986856,
+  "a2_resample_psnr": 27.226524353027344,
+  "a4_jpeg70_auroc": 0.9154519999999998,
+  "a4_jpeg70_psnr": 32.999324798583984,
+  "a4_resize_auroc": 0.926892,
+  "a4_resize_psnr": 26.057552337646484,
+  "a4_blur_auroc": 0.9931559999999999,
+  "a4_blur_psnr": 27.632740020751953,
+  "a3_eps1_auroc": 0.0026360000000000016,
+  "a3_eps1_psnr": 52.208717346191406,
+  "a3_eps2_auroc": 2.400000000000002e-05,
+  "a3_eps2_psnr": 46.286643981933594,
+  "a3_eps4_auroc": 0.0,
+  "a3_eps4_psnr": 40.30125045776367,
+  "a3_eps8_auroc": 0.0,
+  "a3_eps8_psnr": 34.31717300415039,
+  "H_w": 3.99437031010471,
+  "H_max": 4.1588830833596715
+ },
+ {
+  "method": "static",
+  "seed": 0,
+  "trainable": 464515,
+  "params": 86617219,
+  "trainable_pct": 0.5362848234598712,
+  "breakdown": {
+   "ln_affine": 39936,
+   "backbone_total": 86192640,
+   "ln_pct_of_backbone": 0.046333422436068784,
+   "sem_head": 131585,
+   "noise_branch": 292993,
+   "fusion": 1
+  },
+  "train_s": 118.41226744651794,
+  "per_generator": {
+   "progan": {
+    "auroc": 0.997944,
+    "ap": 0.9985716345357997,
+    "shortcut_auroc": 0.4736
+   },
+   "deepfake": {
+    "auroc": 0.729851,
+    "ap": 0.6828899266604638,
+    "shortcut_auroc": 0.5184
+   },
+   "biggan": {
+    "auroc": 0.8985050000000001,
+    "ap": 0.8832588827727796,
+    "shortcut_auroc": 0.521
+   },
+   "gaugan": {
+    "auroc": 0.979499,
+    "ap": 0.9709280459645895,
+    "shortcut_auroc": 0.544
+   },
+   "cyclegan": {
+    "auroc": 0.6483080000000001,
+    "ap": 0.726956293239459,
+    "shortcut_auroc": 0.6308
+   },
+   "stylegan": {
+    "auroc": 0.95699,
+    "ap": 0.9500979585347264,
+    "shortcut_auroc": 0.6396
+   }
+  },
+  "auroc_macro": 0.8685161666666668,
+  "auroc_progan": 0.997944,
+  "auroc_unseen_macro": 0.8426306,
+  "gap": 0.15531340000000005,
+  "a1_auroc": 0.999232,
+  "a1_psnr": 65.37467956542969,
+  "a2_radial_auroc": 0.999084,
+  "a2_radial_psnr": 42.75564956665039,
+  "a2_whiten_auroc": 0.998124,
+  "a2_whiten_psnr": 39.034976959228516,
+  "a2_resample_auroc": 0.826408,
+  "a2_resample_psnr": 27.226524353027344,
+  "a4_jpeg70_auroc": 0.8367639999999998,
+  "a4_jpeg70_psnr": 32.999324798583984,
+  "a4_resize_auroc": 0.74054,
+  "a4_resize_psnr": 26.057552337646484,
+  "a4_blur_auroc": 0.9348080000000002,
+  "a4_blur_psnr": 27.632740020751953,
+  "a3_eps1_auroc": 0.001028000000000001,
+  "a3_eps1_psnr": 51.94358444213867,
+  "a3_eps2_auroc": 2.000000000000002e-05,
+  "a3_eps2_psnr": 46.081565856933594,
+  "a3_eps4_auroc": 0.0,
+  "a3_eps4_psnr": 40.19231033325195,
+  "a3_eps8_auroc": 0.0,
+  "a3_eps8_psnr": 34.30038833618164,
+  "H_w": 3.949126473152622,
+  "H_max": 4.1588830833596715
+ },
+ {
+  "method": "mean",
+  "seed": 0,
+  "trainable": 464514,
+  "params": 86617218,
+  "trainable_pct": 0.5362836751464357,
+  "breakdown": {
+   "ln_affine": 39936,
+   "backbone_total": 86192640,
+   "ln_pct_of_backbone": 0.046333422436068784,
+   "sem_head": 131585,
+   "noise_branch": 292993,
+   "fusion": 0
+  },
+  "train_s": 118.38966035842896,
+  "per_generator": {
+   "progan": {
+    "auroc": 0.9991369999999999,
+    "ap": 0.9992526597146031,
+    "shortcut_auroc": 0.4736
+   },
+   "deepfake": {
+    "auroc": 0.7687330000000001,
+    "ap": 0.7331244420231013,
+    "shortcut_auroc": 0.5184
+   },
+   "biggan": {
+    "auroc": 0.914321,
+    "ap": 0.9112557796842002,
+    "shortcut_auroc": 0.521
+   },
+   "gaugan": {
+    "auroc": 0.984552,
+    "ap": 0.9781470808280562,
+    "shortcut_auroc": 0.544
+   },
+   "cyclegan": {
+    "auroc": 0.7319720000000001,
+    "ap": 0.7753102034096492,
+    "shortcut_auroc": 0.6308
+   },
+   "stylegan": {
+    "auroc": 0.967361,
+    "ap": 0.9639437413018307,
+    "shortcut_auroc": 0.6396
+   }
+  },
+  "auroc_macro": 0.8943460000000001,
+  "auroc_progan": 0.9991369999999999,
+  "auroc_unseen_macro": 0.8733878,
+  "gap": 0.1257491999999999,
+  "a1_auroc": 0.999736,
+  "a1_psnr": 65.37467956542969,
+  "a2_radial_auroc": 0.999732,
+  "a2_radial_psnr": 42.75564956665039,
+  "a2_whiten_auroc": 0.998868,
+  "a2_whiten_psnr": 39.034976959228516,
+  "a2_resample_auroc": 0.92098,
+  "a2_resample_psnr": 27.226524353027344,
+  "a4_jpeg70_auroc": 0.8598000000000001,
+  "a4_jpeg70_psnr": 32.999324798583984,
+  "a4_resize_auroc": 0.8178239999999999,
+  "a4_resize_psnr": 26.057552337646484,
+  "a4_blur_auroc": 0.980072,
+  "a4_blur_psnr": 27.632740020751953,
+  "a3_eps1_auroc": 0.0010560000000000007,
+  "a3_eps1_psnr": 51.88147735595703,
+  "a3_eps2_auroc": 2.000000000000002e-05,
+  "a3_eps2_psnr": 46.02555465698242,
+  "a3_eps4_auroc": 0.0,
+  "a3_eps4_psnr": 40.15077209472656,
+  "a3_eps8_auroc": 0.0,
+  "a3_eps8_psnr": 34.2664680480957,
+  "H_w": 4.042042362120503,
+  "H_max": 4.1588830833596715
+ }
+]

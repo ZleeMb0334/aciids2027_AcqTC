@@ -1,0 +1,198 @@
+[
+ {
+  "method": "ufd",
+  "seed": 0,
+  "provenance": {
+   "paper": "Ojha et al., CVPR 2023 (UniversalFakeDetect)",
+   "code": "github.com/WisconsinAIVision/UniversalFakeDetect",
+   "code_commit": "030495aea3300a8b54c0ec37ec7fe1dd7e63c619",
+   "weights": "official fc_weights.pth",
+   "provenance": "official code + official weights",
+   "weights_sha256": "477100745713bcc957beb2b40859536859b6483fd6301b3b9293151b194c7847"
+  },
+  "train_s": 6.0010247230529785,
+  "per_generator": {
+   "progan": {
+    "auroc": 0.999999,
+    "ap": 0.999999000999001,
+    "shortcut_auroc": 0.4736
+   },
+   "deepfake": {
+    "auroc": 0.8072999999999999,
+    "ap": 0.8293963828367619,
+    "shortcut_auroc": 0.5184
+   },
+   "biggan": {
+    "auroc": 0.991557,
+    "ap": 0.9922177372652856,
+    "shortcut_auroc": 0.521
+   },
+   "gaugan": {
+    "auroc": 0.9997510000000001,
+    "ap": 0.9997540943703946,
+    "shortcut_auroc": 0.544
+   },
+   "cyclegan": {
+    "auroc": 0.9980759999999999,
+    "ap": 0.9981206601075845,
+    "shortcut_auroc": 0.6308
+   },
+   "stylegan": {
+    "auroc": 0.9756420000000001,
+    "ap": 0.9772352780116869,
+    "shortcut_auroc": 0.6396
+   }
+  },
+  "auroc_progan": 0.999999,
+  "auroc_unseen_macro": 0.9544651999999999,
+  "auroc_macro": 0.9620541666666668,
+  "gap": 0.04553380000000007
+ },
+ {
+  "method": "npr",
+  "seed": 0,
+  "provenance": {
+   "paper": "Tan et al., CVPR 2024 (NPR)",
+   "code": "github.com/chuangchuangtan/NPR-DeepfakeDetection",
+   "code_commit": "781ced3f7ca2cdc69ec9dd4ef27e8d0b3c07752a",
+   "weights": "official NPR.pth",
+   "provenance": "official code + official weights",
+   "weights_sha256": "3939297e9399e0b992f87211610769d87d899de50d56da0204d6cbda2d483a53"
+  },
+  "train_s": 0.46232175827026367,
+  "per_generator": {
+   "progan": {
+    "auroc": 0.999728,
+    "ap": 0.9997842859029549,
+    "shortcut_auroc": 0.4736
+   },
+   "deepfake": {
+    "auroc": 0.934435,
+    "ap": 0.9425957831992152,
+    "shortcut_auroc": 0.5184
+   },
+   "biggan": {
+    "auroc": 0.9235519999999999,
+    "ap": 0.9036089793816771,
+    "shortcut_auroc": 0.521
+   },
+   "gaugan": {
+    "auroc": 0.897661,
+    "ap": 0.8489309521644375,
+    "shortcut_auroc": 0.544
+   },
+   "cyclegan": {
+    "auroc": 0.988023,
+    "ap": 0.9850458526255003,
+    "shortcut_auroc": 0.6308
+   },
+   "stylegan": {
+    "auroc": 0.998489,
+    "ap": 0.9986771705290548,
+    "shortcut_auroc": 0.6396
+   }
+  },
+  "auroc_progan": 0.999728,
+  "auroc_unseen_macro": 0.948432,
+  "auroc_macro": 0.9569813333333334,
+  "gap": 0.0512959999999999
+ },
+ {
+  "method": "freqnet",
+  "seed": 0,
+  "provenance": {
+   "paper": "Tan et al., AAAI 2024 (FreqNet)",
+   "code": "github.com/chuangchuangtan/FreqNet-DeepfakeDetection",
+   "code_commit": "2c6bd020cda1c0001e7a7d30ebd2dd5c55b5a8b6",
+   "weights": "official 4-classes-freqnet-v2.pth",
+   "weights_sha256": "606e9855637ab84db68279c44d34aa32b0ab0a5bb9af8d32fe5b398893900902",
+   "provenance": "official code + official weights"
+  },
+  "train_s": 0.07943367958068848,
+  "per_generator": {
+   "progan": {
+    "auroc": 0.999889,
+    "ap": 0.9998995280728133,
+    "shortcut_auroc": 0.4736
+   },
+   "deepfake": {
+    "auroc": 0.969044,
+    "ap": 0.9726273677087859,
+    "shortcut_auroc": 0.5184
+   },
+   "biggan": {
+    "auroc": 0.9604800000000001,
+    "ap": 0.9635313381234969,
+    "shortcut_auroc": 0.521
+   },
+   "gaugan": {
+    "auroc": 0.999027,
+    "ap": 0.999167498964495,
+    "shortcut_auroc": 0.544
+   },
+   "cyclegan": {
+    "auroc": 0.997321,
+    "ap": 0.9973712700364534,
+    "shortcut_auroc": 0.6308
+   },
+   "stylegan": {
+    "auroc": 0.997555,
+    "ap": 0.9977718972131475,
+    "shortcut_auroc": 0.6396
+   }
+  },
+  "auroc_progan": 0.999889,
+  "auroc_unseen_macro": 0.9846854,
+  "auroc_macro": 0.9872193333333334,
+  "gap": 0.015203599999999984
+ },
+ {
+  "method": "cnndetection",
+  "seed": 0,
+  "provenance": {
+   "paper": "Wang et al., CVPR 2020 (CNNDetection)",
+   "code": "github.com/PeterWang512/CNNDetection",
+   "code_commit": "ea0b5622365e3a9cd31d1b54b6b5971131a839ab",
+   "weights": "official blur_jpg_prob0.5.pth",
+   "weights_sha256": "3533f3e58a3b82215f21197f2faf4e99b911ec42a4a6e2d7823e04d5f3fd245a",
+   "provenance": "official code + official weights"
+  },
+  "train_s": 1.799081802368164,
+  "per_generator": {
+   "progan": {
+    "auroc": 1.0,
+    "ap": 1.0,
+    "shortcut_auroc": 0.4736
+   },
+   "deepfake": {
+    "auroc": 0.675903,
+    "ap": 0.671271261257331,
+    "shortcut_auroc": 0.5184
+   },
+   "biggan": {
+    "auroc": 0.892441,
+    "ap": 0.8817032781865117,
+    "shortcut_auroc": 0.521
+   },
+   "gaugan": {
+    "auroc": 0.9827130000000001,
+    "ap": 0.9821735813198853,
+    "shortcut_auroc": 0.544
+   },
+   "cyclegan": {
+    "auroc": 0.9698080000000001,
+    "ap": 0.9683068276168854,
+    "shortcut_auroc": 0.6308
+   },
+   "stylegan": {
+    "auroc": 0.9842230000000001,
+    "ap": 0.9854493629807531,
+    "shortcut_auroc": 0.6396
+   }
+  },
+  "auroc_progan": 1.0,
+  "auroc_unseen_macro": 0.9010176000000001,
+  "auroc_macro": 0.9175146666666666,
+  "gap": 0.09898239999999991
+ }
+]

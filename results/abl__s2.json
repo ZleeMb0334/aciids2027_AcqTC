@@ -1,0 +1,179 @@
+[
+ {
+  "method": "concat",
+  "seed": 2,
+  "trainable": 530307,
+  "params": 86683011,
+  "trainable_pct": 0.6117773181644556,
+  "breakdown": {
+   "ln_affine": 39936,
+   "backbone_total": 86192640,
+   "ln_pct_of_backbone": 0.046333422436068784,
+   "sem_head": 131585,
+   "noise_branch": 292993,
+   "fusion": 65793
+  },
+  "train_s": 256.9038236141205,
+  "evaluation_profile": "transfer+jpeg70+resize",
+  "per_generator": {
+   "progan": {
+    "auroc": 0.999999,
+    "ap": 0.999999000999001,
+    "shortcut_auroc": 0.4736
+   },
+   "deepfake": {
+    "auroc": 0.8254319999999999,
+    "ap": 0.7982711971277083,
+    "shortcut_auroc": 0.5184
+   },
+   "biggan": {
+    "auroc": 0.977108,
+    "ap": 0.9782518131818205,
+    "shortcut_auroc": 0.521
+   },
+   "gaugan": {
+    "auroc": 0.9973799999999999,
+    "ap": 0.9973430324322184,
+    "shortcut_auroc": 0.544
+   },
+   "cyclegan": {
+    "auroc": 0.982194,
+    "ap": 0.9812338857198317,
+    "shortcut_auroc": 0.6308
+   },
+   "stylegan": {
+    "auroc": 0.980986,
+    "ap": 0.9818643864544421,
+    "shortcut_auroc": 0.6396
+   }
+  },
+  "auroc_macro": 0.9605164999999999,
+  "auroc_progan": 0.999999,
+  "auroc_unseen_macro": 0.9526199999999999,
+  "gap": 0.04737900000000006,
+  "a4_jpeg70_auroc": 0.9128879999999999,
+  "a4_jpeg70_psnr": 32.9586067199707,
+  "a4_resize_auroc": 0.951992,
+  "a4_resize_psnr": 25.965839385986328,
+  "H_w": 4.041721194641038,
+  "H_max": 4.1588830833596715
+ },
+ {
+  "method": "static",
+  "seed": 2,
+  "trainable": 464515,
+  "params": 86617219,
+  "trainable_pct": 0.5362848234598712,
+  "breakdown": {
+   "ln_affine": 39936,
+   "backbone_total": 86192640,
+   "ln_pct_of_backbone": 0.046333422436068784,
+   "sem_head": 131585,
+   "noise_branch": 292993,
+   "fusion": 1
+  },
+  "train_s": 255.34800124168396,
+  "evaluation_profile": "transfer+jpeg70+resize",
+  "per_generator": {
+   "progan": {
+    "auroc": 0.997471,
+    "ap": 0.9980827369342392,
+    "shortcut_auroc": 0.4736
+   },
+   "deepfake": {
+    "auroc": 0.7325009999999998,
+    "ap": 0.6814825418540134,
+    "shortcut_auroc": 0.5184
+   },
+   "biggan": {
+    "auroc": 0.887228,
+    "ap": 0.8875512551821156,
+    "shortcut_auroc": 0.521
+   },
+   "gaugan": {
+    "auroc": 0.9823000000000001,
+    "ap": 0.9737499393692325,
+    "shortcut_auroc": 0.544
+   },
+   "cyclegan": {
+    "auroc": 0.686237,
+    "ap": 0.7494667445595027,
+    "shortcut_auroc": 0.6308
+   },
+   "stylegan": {
+    "auroc": 0.970083,
+    "ap": 0.9654701099799086,
+    "shortcut_auroc": 0.6396
+   }
+  },
+  "auroc_macro": 0.87597,
+  "auroc_progan": 0.997471,
+  "auroc_unseen_macro": 0.8516698,
+  "gap": 0.14580119999999996,
+  "a4_jpeg70_auroc": 0.847796,
+  "a4_jpeg70_psnr": 32.9586067199707,
+  "a4_resize_auroc": 0.749716,
+  "a4_resize_psnr": 25.965839385986328,
+  "H_w": 3.9153195721590826,
+  "H_max": 4.1588830833596715
+ },
+ {
+  "method": "mean",
+  "seed": 2,
+  "trainable": 464514,
+  "params": 86617218,
+  "trainable_pct": 0.5362836751464357,
+  "breakdown": {
+   "ln_affine": 39936,
+   "backbone_total": 86192640,
+   "ln_pct_of_backbone": 0.046333422436068784,
+   "sem_head": 131585,
+   "noise_branch": 292993,
+   "fusion": 0
+  },
+  "train_s": 252.58679485321045,
+  "evaluation_profile": "transfer+jpeg70+resize",
+  "per_generator": {
+   "progan": {
+    "auroc": 0.997907,
+    "ap": 0.9981028917886254,
+    "shortcut_auroc": 0.4736
+   },
+   "deepfake": {
+    "auroc": 0.750497,
+    "ap": 0.7000853648110343,
+    "shortcut_auroc": 0.5184
+   },
+   "biggan": {
+    "auroc": 0.8873909999999999,
+    "ap": 0.8885541195901234,
+    "shortcut_auroc": 0.521
+   },
+   "gaugan": {
+    "auroc": 0.978577,
+    "ap": 0.9642755284513755,
+    "shortcut_auroc": 0.544
+   },
+   "cyclegan": {
+    "auroc": 0.7509119999999999,
+    "ap": 0.7924575934555359,
+    "shortcut_auroc": 0.6308
+   },
+   "stylegan": {
+    "auroc": 0.9744799999999999,
+    "ap": 0.9709040846531551,
+    "shortcut_auroc": 0.6396
+   }
+  },
+  "auroc_macro": 0.8899606666666666,
+  "auroc_progan": 0.997907,
+  "auroc_unseen_macro": 0.8683714,
+  "gap": 0.12953559999999997,
+  "a4_jpeg70_auroc": 0.8628159999999999,
+  "a4_jpeg70_psnr": 32.9586067199707,
+  "a4_resize_auroc": 0.7154280000000001,
+  "a4_resize_psnr": 25.965839385986328,
+  "H_w": 4.022615518099313,
+  "H_max": 4.1588830833596715
+ }
+]

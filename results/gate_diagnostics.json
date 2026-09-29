@@ -1,0 +1,257 @@
+{
+  "experiment": "gate diagnostics",
+  "rows": [
+    {
+      "seed": 0,
+      "generator": "progan",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_gatefull__gate_full__s0.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.999872,
+        "ap": 0.9998684086368258
+      },
+      "semantic": {
+        "auroc": 0.999872,
+        "ap": 0.9998684086368258
+      },
+      "spectral": {
+        "auroc": 0.559114,
+        "ap": 0.5338373232990734
+      },
+      "gate_mean": 0.9998165965080261,
+      "gate_sd": 0.00015174690634012222,
+      "gate_real_mean": 0.9997209310531616,
+      "gate_fake_mean": 0.9999122023582458
+    },
+    {
+      "seed": 0,
+      "generator": "progan",
+      "condition": "jpeg70",
+      "n": 1000,
+      "checkpoint": "ckpt_gatefull__gate_full__s0.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.947336,
+        "ap": 0.9603836375928075
+      },
+      "semantic": {
+        "auroc": 0.947396,
+        "ap": 0.9604243303920852
+      },
+      "spectral": {
+        "auroc": 0.52176,
+        "ap": 0.5159251493519338
+      },
+      "gate_mean": 0.9998478889465332,
+      "gate_sd": 9.891244553728029e-05,
+      "gate_real_mean": 0.9998068809509277,
+      "gate_fake_mean": 0.9998888373374939
+    },
+    {
+      "seed": 0,
+      "generator": "progan",
+      "condition": "resize_half",
+      "n": 1000,
+      "checkpoint": "ckpt_gatefull__gate_full__s0.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.98738,
+        "ap": 0.9881544297869436
+      },
+      "semantic": {
+        "auroc": 0.9874519999999999,
+        "ap": 0.9882059044626911
+      },
+      "spectral": {
+        "auroc": 0.533664,
+        "ap": 0.5313514966456299
+      },
+      "gate_mean": 0.9992901682853699,
+      "gate_sd": 0.0003984642098657787,
+      "gate_real_mean": 0.9990519881248474,
+      "gate_fake_mean": 0.9995283484458923
+    },
+    {
+      "seed": 1,
+      "generator": "progan",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_fs__gate_full__s1.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.999884,
+        "ap": 0.9998808683209844
+      },
+      "semantic": {
+        "auroc": 0.999884,
+        "ap": 0.9998808683209844
+      },
+      "spectral": {
+        "auroc": 0.553596,
+        "ap": 0.5378900635483412
+      },
+      "gate_mean": 0.9997908473014832,
+      "gate_sd": 0.00013527901319321245,
+      "gate_real_mean": 0.9997103810310364,
+      "gate_fake_mean": 0.9998712539672852
+    },
+    {
+      "seed": 1,
+      "generator": "progan",
+      "condition": "jpeg70",
+      "n": 1000,
+      "checkpoint": "ckpt_fs__gate_full__s1.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.9394039999999999,
+        "ap": 0.9551196966786275
+      },
+      "semantic": {
+        "auroc": 0.9395000000000001,
+        "ap": 0.9551915084943837
+      },
+      "spectral": {
+        "auroc": 0.53282,
+        "ap": 0.5301764079958344
+      },
+      "gate_mean": 0.9998071193695068,
+      "gate_sd": 0.00010284000018145889,
+      "gate_real_mean": 0.9997695088386536,
+      "gate_fake_mean": 0.9998447299003601
+    },
+    {
+      "seed": 1,
+      "generator": "progan",
+      "condition": "resize_half",
+      "n": 1000,
+      "checkpoint": "ckpt_fs__gate_full__s1.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.984984,
+        "ap": 0.9859312031194043
+      },
+      "semantic": {
+        "auroc": 0.985076,
+        "ap": 0.9859956994052951
+      },
+      "spectral": {
+        "auroc": 0.509048,
+        "ap": 0.5167239182195851
+      },
+      "gate_mean": 0.999366044998169,
+      "gate_sd": 0.0002856436185538769,
+      "gate_real_mean": 0.9992133378982544,
+      "gate_fake_mean": 0.9995188117027283
+    },
+    {
+      "seed": 2,
+      "generator": "progan",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_fs__gate_full__s2.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.99988,
+        "ap": 0.9998768922094624
+      },
+      "semantic": {
+        "auroc": 0.99988,
+        "ap": 0.9998768922094624
+      },
+      "spectral": {
+        "auroc": 0.5818519999999999,
+        "ap": 0.5420704125741611
+      },
+      "gate_mean": 0.9996732473373413,
+      "gate_sd": 0.00014239558367989957,
+      "gate_real_mean": 0.9995855093002319,
+      "gate_fake_mean": 0.9997609853744507
+    },
+    {
+      "seed": 2,
+      "generator": "progan",
+      "condition": "jpeg70",
+      "n": 1000,
+      "checkpoint": "ckpt_fs__gate_full__s2.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.945944,
+        "ap": 0.9592178769858182
+      },
+      "semantic": {
+        "auroc": 0.9459839999999999,
+        "ap": 0.959253451890043
+      },
+      "spectral": {
+        "auroc": 0.546844,
+        "ap": 0.5356967648178432
+      },
+      "gate_mean": 0.9996867179870605,
+      "gate_sd": 0.00011261157487751916,
+      "gate_real_mean": 0.9996476173400879,
+      "gate_fake_mean": 0.9997258186340332
+    },
+    {
+      "seed": 2,
+      "generator": "progan",
+      "condition": "resize_half",
+      "n": 1000,
+      "checkpoint": "ckpt_fs__gate_full__s2.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.9876360000000001,
+        "ap": 0.9889377680928328
+      },
+      "semantic": {
+        "auroc": 0.987664,
+        "ap": 0.9889622329314894
+      },
+      "spectral": {
+        "auroc": 0.50574,
+        "ap": 0.520892027053537
+      },
+      "gate_mean": 0.997833251953125,
+      "gate_sd": 0.0006426280015148222,
+      "gate_real_mean": 0.9974994659423828,
+      "gate_fake_mean": 0.998167097568512
+    }
+  ]
+}

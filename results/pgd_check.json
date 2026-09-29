@@ -1,0 +1,81 @@
+{
+  "experiment": "PGD optimization check",
+  "method": "gate_full",
+  "seed": 0,
+  "checkpoint": "ckpt_gatefull__gate_full__s0.pt",
+  "config": {
+    "arch": "ViT-B-16-quickgelu",
+    "tune": "ln",
+    "size": 224
+  },
+  "test_n": 128,
+  "test_sample_seed": 0,
+  "epsilon_over_255": 0.25,
+  "alpha": "epsilon/8",
+  "target": 0,
+  "random_initialization": true,
+  "projection": "L-infinity ball intersected with [0,1]",
+  "threshold": -0.5792026370763779,
+  "threshold_info": {
+    "n": 800,
+    "target_fpr": 0.05,
+    "real_fpr": 0.05172413793103448
+  },
+  "rows": [
+    {
+      "auroc": 0.610595703125,
+      "clean_auroc": 0.999267578125,
+      "clean_fake_tpr": 1.0,
+      "attacked_fake_tpr": 0.4375,
+      "targeted_evasion_rate": 0.5625,
+      "conditional_evasion_rate": 0.5625,
+      "initially_detected_fake_n": 64,
+      "steps": 10,
+      "restarts": 1
+    },
+    {
+      "auroc": 0.38720703125,
+      "clean_auroc": 0.999267578125,
+      "clean_fake_tpr": 1.0,
+      "attacked_fake_tpr": 0.15625,
+      "targeted_evasion_rate": 0.84375,
+      "conditional_evasion_rate": 0.84375,
+      "initially_detected_fake_n": 64,
+      "steps": 20,
+      "restarts": 1
+    },
+    {
+      "auroc": 0.262939453125,
+      "clean_auroc": 0.999267578125,
+      "clean_fake_tpr": 1.0,
+      "attacked_fake_tpr": 0.09375,
+      "targeted_evasion_rate": 0.90625,
+      "conditional_evasion_rate": 0.90625,
+      "initially_detected_fake_n": 64,
+      "steps": 40,
+      "restarts": 1
+    },
+    {
+      "auroc": 0.2158203125,
+      "clean_auroc": 0.999267578125,
+      "clean_fake_tpr": 1.0,
+      "attacked_fake_tpr": 0.0625,
+      "targeted_evasion_rate": 0.9375,
+      "conditional_evasion_rate": 0.9375,
+      "initially_detected_fake_n": 64,
+      "steps": 80,
+      "restarts": 1
+    },
+    {
+      "auroc": 0.245849609375,
+      "clean_auroc": 0.999267578125,
+      "clean_fake_tpr": 1.0,
+      "attacked_fake_tpr": 0.078125,
+      "targeted_evasion_rate": 0.921875,
+      "conditional_evasion_rate": 0.921875,
+      "initially_detected_fake_n": 64,
+      "steps": 40,
+      "restarts": 5
+    }
+  ]
+}

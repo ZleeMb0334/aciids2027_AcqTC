@@ -1,0 +1,43 @@
+{
+  "experiment": "held-out local spectral linearization",
+  "measurement_version": 3,
+  "method": "gate_full",
+  "seed": 0,
+  "checkpoint": "ckpt_gatefull__gate_full__s0.pt",
+  "config": {
+    "arch": "ViT-B-16-quickgelu",
+    "tune": "ln",
+    "size": 224
+  },
+  "images": 32,
+  "sample_seed": 0,
+  "probe_seed": 2027,
+  "fit_scale": 0.01,
+  "train_probes": 128,
+  "test_probes_per_scale": 64,
+  "design_rank": 64,
+  "bands": 64,
+  "tests": {
+    "scale_0.005": {
+      "full_r2": 0.6733257875287066,
+      "full_corr2": 0.7883519159644566,
+      "full_rmse": 0.0016949198508583567,
+      "linear_path_r2": 0.9999999999577003,
+      "linear_path_corr2": 0.9999999999686879
+    },
+    "scale_0.010": {
+      "full_r2": 0.7961036125312957,
+      "full_corr2": 0.8096067750592904,
+      "full_rmse": 0.0017146686939393055,
+      "linear_path_r2": 0.9999999999827074,
+      "linear_path_corr2": 0.9999999999917106
+    },
+    "scale_0.020": {
+      "full_r2": 0.1405846621991792,
+      "full_corr2": 0.543390775085965,
+      "full_rmse": 0.004486189426724987,
+      "linear_path_r2": 0.9999999999967072,
+      "linear_path_corr2": 0.9999999999975671
+    }
+  }
+}

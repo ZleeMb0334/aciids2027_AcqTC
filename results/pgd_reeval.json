@@ -1,0 +1,485 @@
+{
+  "experiment": "corrected fused-loss PGD table",
+  "rows": [
+    {
+      "method": "gate",
+      "seed": 0,
+      "checkpoint": "ckpt_fs__gate__s0.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "n": 1000,
+      "loss": "fused-logit binary cross-entropy toward label 0",
+      "steps": 40,
+      "alpha": "epsilon/8",
+      "restarts": 1,
+      "random_initialization": true,
+      "eps1": {
+        "auroc": 0.01448400000000001,
+        "psnr": 52.28487014770508
+      },
+      "eps2": {
+        "auroc": 0.0072240000000000065,
+        "psnr": 46.411109924316406
+      },
+      "eps4": {
+        "auroc": 0.0025760000000000023,
+        "psnr": 40.4290771484375
+      },
+      "eps8": {
+        "auroc": 9.600000000000008e-05,
+        "psnr": 34.3982048034668
+      }
+    },
+    {
+      "method": "gate",
+      "seed": 1,
+      "checkpoint": "ckpt_fs__gate__s1.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "n": 1000,
+      "loss": "fused-logit binary cross-entropy toward label 0",
+      "steps": 40,
+      "alpha": "epsilon/8",
+      "restarts": 1,
+      "random_initialization": true,
+      "eps1": {
+        "auroc": 0.01195600000000001,
+        "psnr": 52.2503662109375
+      },
+      "eps2": {
+        "auroc": 0.002924000000000002,
+        "psnr": 46.3680419921875
+      },
+      "eps4": {
+        "auroc": 0.0002200000000000002,
+        "psnr": 40.366737365722656
+      },
+      "eps8": {
+        "auroc": 0.0,
+        "psnr": 34.33232879638672
+      }
+    },
+    {
+      "method": "gate",
+      "seed": 2,
+      "checkpoint": "ckpt_fs__gate__s2.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "n": 1000,
+      "loss": "fused-logit binary cross-entropy toward label 0",
+      "steps": 40,
+      "alpha": "epsilon/8",
+      "restarts": 1,
+      "random_initialization": true,
+      "eps1": {
+        "auroc": 0.0008720000000000003,
+        "psnr": 52.23395538330078
+      },
+      "eps2": {
+        "auroc": 0.0,
+        "psnr": 46.34857940673828
+      },
+      "eps4": {
+        "auroc": 0.0,
+        "psnr": 40.35377502441406
+      },
+      "eps8": {
+        "auroc": 0.0,
+        "psnr": 34.307498931884766
+      }
+    },
+    {
+      "method": "gate_robust",
+      "seed": 0,
+      "checkpoint": "ckpt_fs__gate_robust__s0.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "n": 1000,
+      "loss": "fused-logit binary cross-entropy toward label 0",
+      "steps": 40,
+      "alpha": "epsilon/8",
+      "restarts": 1,
+      "random_initialization": true,
+      "eps1": {
+        "auroc": 5.600000000000005e-05,
+        "psnr": 50.50041580200195
+      },
+      "eps2": {
+        "auroc": 0.0,
+        "psnr": 45.137298583984375
+      },
+      "eps4": {
+        "auroc": 0.00012000000000000011,
+        "psnr": 39.57548522949219
+      },
+      "eps8": {
+        "auroc": 2.400000000000002e-05,
+        "psnr": 33.89365768432617
+      }
+    },
+    {
+      "method": "gate_robust",
+      "seed": 1,
+      "checkpoint": "ckpt_fs__gate_robust__s1.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "n": 1000,
+      "loss": "fused-logit binary cross-entropy toward label 0",
+      "steps": 40,
+      "alpha": "epsilon/8",
+      "restarts": 1,
+      "random_initialization": true,
+      "eps1": {
+        "auroc": 4.000000000000004e-06,
+        "psnr": 50.56314468383789
+      },
+      "eps2": {
+        "auroc": 2.000000000000002e-05,
+        "psnr": 45.19403076171875
+      },
+      "eps4": {
+        "auroc": 0.0,
+        "psnr": 39.61491394042969
+      },
+      "eps8": {
+        "auroc": 0.0,
+        "psnr": 33.9057731628418
+      }
+    },
+    {
+      "method": "gate_robust",
+      "seed": 2,
+      "checkpoint": "ckpt_fs__gate_robust__s2.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "n": 1000,
+      "loss": "fused-logit binary cross-entropy toward label 0",
+      "steps": 40,
+      "alpha": "epsilon/8",
+      "restarts": 1,
+      "random_initialization": true,
+      "eps1": {
+        "auroc": 1.2000000000000012e-05,
+        "psnr": 50.506446838378906
+      },
+      "eps2": {
+        "auroc": 0.0,
+        "psnr": 45.128265380859375
+      },
+      "eps4": {
+        "auroc": 0.0,
+        "psnr": 39.559547424316406
+      },
+      "eps8": {
+        "auroc": 4.000000000000004e-05,
+        "psnr": 33.871421813964844
+      }
+    },
+    {
+      "method": "gate_srr",
+      "seed": 0,
+      "checkpoint": "ckpt_fs__gate_srr__s0.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "n": 1000,
+      "loss": "fused-logit binary cross-entropy toward label 0",
+      "steps": 40,
+      "alpha": "epsilon/8",
+      "restarts": 1,
+      "random_initialization": true,
+      "eps1": {
+        "auroc": 8.000000000000008e-06,
+        "psnr": 50.51925277709961
+      },
+      "eps2": {
+        "auroc": 2.400000000000002e-05,
+        "psnr": 45.142494201660156
+      },
+      "eps4": {
+        "auroc": 0.0,
+        "psnr": 39.57406997680664
+      },
+      "eps8": {
+        "auroc": 0.0,
+        "psnr": 33.8874626159668
+      }
+    },
+    {
+      "method": "gate_srr",
+      "seed": 1,
+      "checkpoint": "ckpt_fs__gate_srr__s1.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "n": 1000,
+      "loss": "fused-logit binary cross-entropy toward label 0",
+      "steps": 40,
+      "alpha": "epsilon/8",
+      "restarts": 1,
+      "random_initialization": true,
+      "eps1": {
+        "auroc": 0.0,
+        "psnr": 50.61624526977539
+      },
+      "eps2": {
+        "auroc": 0.0,
+        "psnr": 45.1934700012207
+      },
+      "eps4": {
+        "auroc": 0.0,
+        "psnr": 39.59678268432617
+      },
+      "eps8": {
+        "auroc": 0.0,
+        "psnr": 33.894927978515625
+      }
+    },
+    {
+      "method": "gate_srr",
+      "seed": 2,
+      "checkpoint": "ckpt_fs__gate_srr__s2.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "n": 1000,
+      "loss": "fused-logit binary cross-entropy toward label 0",
+      "steps": 40,
+      "alpha": "epsilon/8",
+      "restarts": 1,
+      "random_initialization": true,
+      "eps1": {
+        "auroc": 5.600000000000005e-05,
+        "psnr": 50.51109313964844
+      },
+      "eps2": {
+        "auroc": 0.0,
+        "psnr": 45.16337585449219
+      },
+      "eps4": {
+        "auroc": 0.0,
+        "psnr": 39.59450149536133
+      },
+      "eps8": {
+        "auroc": 0.0,
+        "psnr": 33.899757385253906
+      }
+    },
+    {
+      "method": "gate_full",
+      "seed": 0,
+      "checkpoint": "ckpt_gatefull__gate_full__s0.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "n": 1000,
+      "loss": "fused-logit binary cross-entropy toward label 0",
+      "steps": 40,
+      "alpha": "epsilon/8",
+      "restarts": 1,
+      "random_initialization": true,
+      "eps1": {
+        "auroc": 6.000000000000006e-05,
+        "psnr": 50.3375244140625
+      },
+      "eps2": {
+        "auroc": 1.200000000000001e-05,
+        "psnr": 45.015052795410156
+      },
+      "eps4": {
+        "auroc": 0.0,
+        "psnr": 39.50681686401367
+      },
+      "eps8": {
+        "auroc": 0.0,
+        "psnr": 33.85453414916992
+      }
+    },
+    {
+      "method": "gate_full",
+      "seed": 1,
+      "checkpoint": "ckpt_fs__gate_full__s1.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "n": 1000,
+      "loss": "fused-logit binary cross-entropy toward label 0",
+      "steps": 40,
+      "alpha": "epsilon/8",
+      "restarts": 1,
+      "random_initialization": true,
+      "eps1": {
+        "auroc": 0.000272,
+        "psnr": 50.3861083984375
+      },
+      "eps2": {
+        "auroc": 4.000000000000004e-06,
+        "psnr": 45.05804443359375
+      },
+      "eps4": {
+        "auroc": 0.0,
+        "psnr": 39.53352355957031
+      },
+      "eps8": {
+        "auroc": 0.0,
+        "psnr": 33.86610412597656
+      }
+    },
+    {
+      "method": "gate_full",
+      "seed": 2,
+      "checkpoint": "ckpt_fs__gate_full__s2.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "n": 1000,
+      "loss": "fused-logit binary cross-entropy toward label 0",
+      "steps": 40,
+      "alpha": "epsilon/8",
+      "restarts": 1,
+      "random_initialization": true,
+      "eps1": {
+        "auroc": 0.0001080000000000001,
+        "psnr": 50.37546157836914
+      },
+      "eps2": {
+        "auroc": 4.000000000000004e-06,
+        "psnr": 45.040916442871094
+      },
+      "eps4": {
+        "auroc": 0.0,
+        "psnr": 39.5297966003418
+      },
+      "eps8": {
+        "auroc": 0.0,
+        "psnr": 33.866756439208984
+      }
+    },
+    {
+      "method": "semantic_tc",
+      "seed": 0,
+      "checkpoint": "ckpt_semtc__semantic_tc__s0.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "n": 1000,
+      "loss": "fused-logit binary cross-entropy toward label 0",
+      "steps": 40,
+      "alpha": "epsilon/8",
+      "restarts": 1,
+      "random_initialization": true,
+      "eps1": {
+        "auroc": 0.00012400000000000011,
+        "psnr": 50.368743896484375
+      },
+      "eps2": {
+        "auroc": 0.0,
+        "psnr": 45.05617141723633
+      },
+      "eps4": {
+        "auroc": 0.0,
+        "psnr": 39.53974151611328
+      },
+      "eps8": {
+        "auroc": 0.0,
+        "psnr": 33.875404357910156
+      }
+    },
+    {
+      "method": "semantic_tc",
+      "seed": 1,
+      "checkpoint": "ckpt_semtc__semantic_tc__s1.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "n": 1000,
+      "loss": "fused-logit binary cross-entropy toward label 0",
+      "steps": 40,
+      "alpha": "epsilon/8",
+      "restarts": 1,
+      "random_initialization": true,
+      "eps1": {
+        "auroc": 0.0006919999999999999,
+        "psnr": 50.38998794555664
+      },
+      "eps2": {
+        "auroc": 1.200000000000001e-05,
+        "psnr": 45.060733795166016
+      },
+      "eps4": {
+        "auroc": 0.0,
+        "psnr": 39.543556213378906
+      },
+      "eps8": {
+        "auroc": 0.0,
+        "psnr": 33.871280670166016
+      }
+    },
+    {
+      "method": "semantic_tc",
+      "seed": 2,
+      "checkpoint": "ckpt_semtc__semantic_tc__s2.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "n": 1000,
+      "loss": "fused-logit binary cross-entropy toward label 0",
+      "steps": 40,
+      "alpha": "epsilon/8",
+      "restarts": 1,
+      "random_initialization": true,
+      "eps1": {
+        "auroc": 0.0013039999999999996,
+        "psnr": 50.407772064208984
+      },
+      "eps2": {
+        "auroc": 0.0,
+        "psnr": 45.060665130615234
+      },
+      "eps4": {
+        "auroc": 0.0,
+        "psnr": 39.531700134277344
+      },
+      "eps8": {
+        "auroc": 0.0,
+        "psnr": 33.861053466796875
+      }
+    }
+  ]
+}

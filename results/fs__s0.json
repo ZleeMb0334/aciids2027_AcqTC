@@ -1,0 +1,461 @@
+[
+ {
+  "method": "semantic",
+  "seed": 0,
+  "trainable": 171521,
+  "params": 86324225,
+  "trainable_pct": 0.1986939355667543,
+  "breakdown": {
+   "ln_affine": 39936,
+   "backbone_total": 86192640,
+   "ln_pct_of_backbone": 0.046333422436068784,
+   "sem_head": 131585,
+   "noise_branch": 292993,
+   "fusion": 0
+  },
+  "train_s": 384.08723425865173,
+  "per_generator": {
+   "progan": {
+    "auroc": 0.999945,
+    "ap": 0.9999435168205116,
+    "shortcut_auroc": 0.4736
+   },
+   "deepfake": {
+    "auroc": 0.84532,
+    "ap": 0.8403878601119473,
+    "shortcut_auroc": 0.5184
+   },
+   "biggan": {
+    "auroc": 0.9814550000000001,
+    "ap": 0.9817561008375288,
+    "shortcut_auroc": 0.521
+   },
+   "gaugan": {
+    "auroc": 0.998856,
+    "ap": 0.9988340075515473,
+    "shortcut_auroc": 0.544
+   },
+   "cyclegan": {
+    "auroc": 0.987283,
+    "ap": 0.9875584425982947,
+    "shortcut_auroc": 0.6308
+   },
+   "stylegan": {
+    "auroc": 0.9740399999999999,
+    "ap": 0.976347602401745,
+    "shortcut_auroc": 0.6396
+   }
+  },
+  "auroc_macro": 0.9644831666666666,
+  "auroc_progan": 0.999945,
+  "auroc_unseen_macro": 0.9573908,
+  "gap": 0.042554199999999986,
+  "a1_auroc": 0.999892,
+  "a1_psnr": 65.37467956542969,
+  "a2_radial_auroc": 0.9999,
+  "a2_radial_psnr": 42.75564956665039,
+  "a2_whiten_auroc": 0.999696,
+  "a2_whiten_psnr": 39.034976959228516,
+  "a2_resample_auroc": 0.9916800000000001,
+  "a2_resample_psnr": 27.226524353027344,
+  "a4_jpeg70_auroc": 0.878204,
+  "a4_jpeg70_psnr": 32.999324798583984,
+  "a4_resize_auroc": 0.980196,
+  "a4_resize_psnr": 26.057552337646484,
+  "a4_blur_auroc": 0.992428,
+  "a4_blur_psnr": 27.632740020751953,
+  "a3_eps1_auroc": 0.0,
+  "a3_eps1_psnr": 50.58293914794922,
+  "a3_eps2_auroc": 0.0002040000000000002,
+  "a3_eps2_psnr": 45.20081329345703,
+  "a3_eps4_auroc": 0.0,
+  "a3_eps4_psnr": 39.6212043762207,
+  "a3_eps8_auroc": 0.0,
+  "a3_eps8_psnr": 33.916709899902344,
+  "H_w": 3.99437031010471,
+  "H_max": 4.1588830833596715,
+  "instantiated_trainable": 464514,
+  "instantiated_params": 86617218,
+  "parameter_scope": "active semantic deployment path"
+ },
+ {
+  "method": "noise",
+  "seed": 0,
+  "trainable": 464514,
+  "params": 86617218,
+  "trainable_pct": 0.5362836751464357,
+  "breakdown": {
+   "ln_affine": 39936,
+   "backbone_total": 86192640,
+   "ln_pct_of_backbone": 0.046333422436068784,
+   "sem_head": 131585,
+   "noise_branch": 292993,
+   "fusion": 0
+  },
+  "train_s": 486.1082055568695,
+  "per_generator": {
+   "progan": {
+    "auroc": 0.833041,
+    "ap": 0.7828856597118213,
+    "shortcut_auroc": 0.4736
+   },
+   "deepfake": {
+    "auroc": 0.612529,
+    "ap": 0.5760118627747106,
+    "shortcut_auroc": 0.5184
+   },
+   "biggan": {
+    "auroc": 0.663618,
+    "ap": 0.6127600042595318,
+    "shortcut_auroc": 0.521
+   },
+   "gaugan": {
+    "auroc": 0.7883770000000001,
+    "ap": 0.7423061657943206,
+    "shortcut_auroc": 0.544
+   },
+   "cyclegan": {
+    "auroc": 0.509939,
+    "ap": 0.6715856943849092,
+    "shortcut_auroc": 0.6308
+   },
+   "stylegan": {
+    "auroc": 0.846387,
+    "ap": 0.7762521757401116,
+    "shortcut_auroc": 0.6396
+   }
+  },
+  "auroc_macro": 0.7089818333333334,
+  "auroc_progan": 0.833041,
+  "auroc_unseen_macro": 0.6841700000000001,
+  "gap": 0.14887099999999998,
+  "a1_auroc": 0.8236,
+  "a1_psnr": 65.37467956542969,
+  "a2_radial_auroc": 0.8178000000000001,
+  "a2_radial_psnr": 42.75564956665039,
+  "a2_whiten_auroc": 0.8163000000000001,
+  "a2_whiten_psnr": 39.034976959228516,
+  "a2_resample_auroc": 0.462048,
+  "a2_resample_psnr": 27.226524353027344,
+  "a4_jpeg70_auroc": 0.599212,
+  "a4_jpeg70_psnr": 32.999324798583984,
+  "a4_resize_auroc": 0.511644,
+  "a4_resize_psnr": 26.057552337646484,
+  "a4_blur_auroc": 0.685266,
+  "a4_blur_psnr": 27.632740020751953,
+  "a3_eps1_auroc": 0.0,
+  "a3_eps1_psnr": 51.908992767333984,
+  "a3_eps2_auroc": 0.0,
+  "a3_eps2_psnr": 46.015933990478516,
+  "a3_eps4_auroc": 0.0,
+  "a3_eps4_psnr": 40.0997200012207,
+  "a3_eps8_auroc": 0.0,
+  "a3_eps8_psnr": 34.17990493774414,
+  "H_w": 3.960963552847746,
+  "H_max": 4.1588830833596715
+ },
+ {
+  "method": "gate",
+  "seed": 0,
+  "trainable": 530307,
+  "params": 86683011,
+  "trainable_pct": 0.6117773181644556,
+  "breakdown": {
+   "ln_affine": 39936,
+   "backbone_total": 86192640,
+   "ln_pct_of_backbone": 0.046333422436068784,
+   "sem_head": 131585,
+   "noise_branch": 292993,
+   "fusion": 65793
+  },
+  "train_s": 590.5739274024963,
+  "per_generator": {
+   "progan": {
+    "auroc": 0.999975,
+    "ap": 0.9999747205973651,
+    "shortcut_auroc": 0.4736
+   },
+   "deepfake": {
+    "auroc": 0.84828,
+    "ap": 0.8422269538529198,
+    "shortcut_auroc": 0.5184
+   },
+   "biggan": {
+    "auroc": 0.9816109999999999,
+    "ap": 0.9820169417975183,
+    "shortcut_auroc": 0.521
+   },
+   "gaugan": {
+    "auroc": 0.998994,
+    "ap": 0.9989898771077405,
+    "shortcut_auroc": 0.544
+   },
+   "cyclegan": {
+    "auroc": 0.991444,
+    "ap": 0.9913822222256231,
+    "shortcut_auroc": 0.6308
+   },
+   "stylegan": {
+    "auroc": 0.981348,
+    "ap": 0.9818985076113707,
+    "shortcut_auroc": 0.6396
+   }
+  },
+  "auroc_macro": 0.966942,
+  "auroc_progan": 0.999975,
+  "auroc_unseen_macro": 0.9603354,
+  "gap": 0.0396396,
+  "a1_auroc": 0.999948,
+  "a1_psnr": 65.37467956542969,
+  "a2_radial_auroc": 0.999948,
+  "a2_radial_psnr": 42.75564956665039,
+  "a2_whiten_auroc": 0.9998319999999999,
+  "a2_whiten_psnr": 39.034976959228516,
+  "a2_resample_auroc": 0.9742359999999999,
+  "a2_resample_psnr": 27.226524353027344,
+  "a4_jpeg70_auroc": 0.9156759999999999,
+  "a4_jpeg70_psnr": 32.999324798583984,
+  "a4_resize_auroc": 0.618408,
+  "a4_resize_psnr": 26.057552337646484,
+  "a4_blur_auroc": 0.694772,
+  "a4_blur_psnr": 27.632740020751953,
+  "a3_eps1_auroc": 0.02171600000000002,
+  "a3_eps1_psnr": 52.34421920776367,
+  "a3_eps2_auroc": 0.013956000000000012,
+  "a3_eps2_psnr": 46.481101989746094,
+  "a3_eps4_auroc": 0.008228000000000008,
+  "a3_eps4_psnr": 40.515037536621094,
+  "a3_eps8_auroc": 0.002584000000000002,
+  "a3_eps8_psnr": 34.4942512512207,
+  "H_w": 3.959847656905856,
+  "H_max": 4.1588830833596715
+ },
+ {
+  "method": "gate_robust",
+  "seed": 0,
+  "trainable": 530307,
+  "params": 86683011,
+  "trainable_pct": 0.6117773181644556,
+  "breakdown": {
+   "ln_affine": 39936,
+   "backbone_total": 86192640,
+   "ln_pct_of_backbone": 0.046333422436068784,
+   "sem_head": 131585,
+   "noise_branch": 292993,
+   "fusion": 65793
+  },
+  "train_s": 539.8611159324646,
+  "per_generator": {
+   "progan": {
+    "auroc": 0.99993,
+    "ap": 0.9999275420414139,
+    "shortcut_auroc": 0.4736
+   },
+   "deepfake": {
+    "auroc": 0.8344610000000001,
+    "ap": 0.8311213393120792,
+    "shortcut_auroc": 0.5184
+   },
+   "biggan": {
+    "auroc": 0.969202,
+    "ap": 0.9703225978309197,
+    "shortcut_auroc": 0.521
+   },
+   "gaugan": {
+    "auroc": 0.997128,
+    "ap": 0.9972105326294198,
+    "shortcut_auroc": 0.544
+   },
+   "cyclegan": {
+    "auroc": 0.984055,
+    "ap": 0.9835610150317464,
+    "shortcut_auroc": 0.6308
+   },
+   "stylegan": {
+    "auroc": 0.9526100000000001,
+    "ap": 0.958065792567695,
+    "shortcut_auroc": 0.6396
+   }
+  },
+  "auroc_macro": 0.9562309999999999,
+  "auroc_progan": 0.99993,
+  "auroc_unseen_macro": 0.9474912000000002,
+  "gap": 0.052438799999999786,
+  "a1_auroc": 0.999852,
+  "a1_psnr": 65.37467956542969,
+  "a2_radial_auroc": 0.999844,
+  "a2_radial_psnr": 42.75564956665039,
+  "a2_whiten_auroc": 0.999616,
+  "a2_whiten_psnr": 39.034976959228516,
+  "a2_resample_auroc": 0.9880599999999999,
+  "a2_resample_psnr": 27.226524353027344,
+  "a4_jpeg70_auroc": 0.879304,
+  "a4_jpeg70_psnr": 32.999324798583984,
+  "a4_resize_auroc": 0.9736319999999999,
+  "a4_resize_psnr": 26.057552337646484,
+  "a4_blur_auroc": 0.989136,
+  "a4_blur_psnr": 27.632740020751953,
+  "a3_eps1_auroc": 3.6000000000000035e-05,
+  "a3_eps1_psnr": 50.501548767089844,
+  "a3_eps2_auroc": 0.0,
+  "a3_eps2_psnr": 45.13924789428711,
+  "a3_eps4_auroc": 2.400000000000002e-05,
+  "a3_eps4_psnr": 39.58347702026367,
+  "a3_eps8_auroc": 7.200000000000007e-05,
+  "a3_eps8_psnr": 33.89971160888672,
+  "H_w": 3.98791654713736,
+  "H_max": 4.1588830833596715
+ },
+ {
+  "method": "gate_srr",
+  "seed": 0,
+  "trainable": 530307,
+  "params": 86683011,
+  "trainable_pct": 0.6117773181644556,
+  "breakdown": {
+   "ln_affine": 39936,
+   "backbone_total": 86192640,
+   "ln_pct_of_backbone": 0.046333422436068784,
+   "sem_head": 131585,
+   "noise_branch": 292993,
+   "fusion": 65793
+  },
+  "train_s": 134.87253284454346,
+  "per_generator": {
+   "progan": {
+    "auroc": 0.9999239999999999,
+    "ap": 0.9999211628906324,
+    "shortcut_auroc": 0.4736
+   },
+   "deepfake": {
+    "auroc": 0.8215819999999998,
+    "ap": 0.813515250775505,
+    "shortcut_auroc": 0.5184
+   },
+   "biggan": {
+    "auroc": 0.977211,
+    "ap": 0.9767637867229957,
+    "shortcut_auroc": 0.521
+   },
+   "gaugan": {
+    "auroc": 0.9981059999999999,
+    "ap": 0.998144840225208,
+    "shortcut_auroc": 0.544
+   },
+   "cyclegan": {
+    "auroc": 0.984975,
+    "ap": 0.9851968984307437,
+    "shortcut_auroc": 0.6308
+   },
+   "stylegan": {
+    "auroc": 0.960564,
+    "ap": 0.9644714186541251,
+    "shortcut_auroc": 0.6396
+   }
+  },
+  "auroc_macro": 0.9570603333333333,
+  "auroc_progan": 0.9999239999999999,
+  "auroc_unseen_macro": 0.9484876,
+  "gap": 0.05143639999999994,
+  "a1_auroc": 0.999848,
+  "a1_psnr": 65.37467956542969,
+  "a2_radial_auroc": 0.99984,
+  "a2_radial_psnr": 42.75564956665039,
+  "a2_whiten_auroc": 0.999572,
+  "a2_whiten_psnr": 39.034976959228516,
+  "a2_resample_auroc": 0.988016,
+  "a2_resample_psnr": 27.226524353027344,
+  "a4_jpeg70_auroc": 0.8764880000000002,
+  "a4_jpeg70_psnr": 32.999324798583984,
+  "a4_resize_auroc": 0.9729080000000001,
+  "a4_resize_psnr": 26.057552337646484,
+  "a4_blur_auroc": 0.98872,
+  "a4_blur_psnr": 27.632740020751953,
+  "a3_eps1_auroc": 0.0,
+  "a3_eps1_psnr": 50.51466369628906,
+  "a3_eps2_auroc": 4.000000000000004e-06,
+  "a3_eps2_psnr": 45.14204025268555,
+  "a3_eps4_auroc": 0.0,
+  "a3_eps4_psnr": 39.5760383605957,
+  "a3_eps8_auroc": 0.0,
+  "a3_eps8_psnr": 33.88766860961914,
+  "H_w": 3.9622407901063,
+  "H_max": 4.1588830833596715
+ },
+ {
+  "method": "gate_full",
+  "seed": 0,
+  "trainable": 530307,
+  "params": 86683011,
+  "trainable_pct": 0.6117773181644556,
+  "breakdown": {
+   "ln_affine": 39936,
+   "backbone_total": 86192640,
+   "ln_pct_of_backbone": 0.046333422436068784,
+   "sem_head": 131585,
+   "noise_branch": 292993,
+   "fusion": 65793
+  },
+  "train_s": 435.0038778781891,
+  "per_generator": {
+   "progan": {
+    "auroc": 0.999921,
+    "ap": 0.9999181708707002,
+    "shortcut_auroc": 0.4736
+   },
+   "deepfake": {
+    "auroc": 0.8411850000000001,
+    "ap": 0.8392148333123876,
+    "shortcut_auroc": 0.5184
+   },
+   "biggan": {
+    "auroc": 0.9716100000000001,
+    "ap": 0.972317169909518,
+    "shortcut_auroc": 0.521
+   },
+   "gaugan": {
+    "auroc": 0.998857,
+    "ap": 0.9988282474961617,
+    "shortcut_auroc": 0.544
+   },
+   "cyclegan": {
+    "auroc": 0.984612,
+    "ap": 0.9841761238261086,
+    "shortcut_auroc": 0.6308
+   },
+   "stylegan": {
+    "auroc": 0.9757309999999999,
+    "ap": 0.9777669710515761,
+    "shortcut_auroc": 0.6396
+   }
+  },
+  "auroc_macro": 0.961986,
+  "auroc_progan": 0.999921,
+  "auroc_unseen_macro": 0.9543989999999999,
+  "gap": 0.04552200000000006,
+  "a1_auroc": 0.999824,
+  "a1_psnr": 65.37467956542969,
+  "a2_radial_auroc": 0.99984,
+  "a2_radial_psnr": 42.75564956665039,
+  "a2_whiten_auroc": 0.999644,
+  "a2_whiten_psnr": 39.034976959228516,
+  "a2_resample_auroc": 0.9934080000000001,
+  "a2_resample_psnr": 27.226524353027344,
+  "a4_jpeg70_auroc": 0.932744,
+  "a4_jpeg70_psnr": 32.999324798583984,
+  "a4_resize_auroc": 0.9850960000000001,
+  "a4_resize_psnr": 26.057552337646484,
+  "a4_blur_auroc": 0.9937800000000001,
+  "a4_blur_psnr": 27.632740020751953,
+  "a3_eps1_auroc": 8.000000000000008e-06,
+  "a3_eps1_psnr": 50.3373908996582,
+  "a3_eps2_auroc": 0.0,
+  "a3_eps2_psnr": 45.00553512573242,
+  "a3_eps4_auroc": 0.0,
+  "a3_eps4_psnr": 39.502349853515625,
+  "a3_eps8_auroc": 0.0,
+  "a3_eps8_psnr": 33.847389221191406,
+  "H_w": 3.967532141705088,
+  "H_max": 4.1588830833596715
+ }
+]

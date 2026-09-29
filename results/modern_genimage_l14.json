@@ -1,0 +1,2333 @@
+{
+  "experiment": "canonicalized GenImage transfer",
+  "protocol": {
+    "sample_seed": 0,
+    "n_per_generator": 1000,
+    "canonical_size": 128,
+    "model_size": 224,
+    "history_matching": "sample real JPEG quantization tables within each generator subset",
+    "common_chain": "resize to canonical square, JPEG-95, resize to detector input",
+    "robustness_generators": [
+      "Midjourney",
+      "stable_diffusion_v_1_5"
+    ],
+    "postprocessing": [
+      "JPEG-70",
+      "half-scale downsample-upsample"
+    ],
+    "methods": [
+      "semantic_l",
+      "semantic_tc_l"
+    ]
+  },
+  "canonical_shortcut_auroc_from_byte_size": {
+    "ADM": 0.5839759999999999,
+    "BigGAN": 0.528516,
+    "glide": 0.7542259999999998,
+    "Midjourney": 0.5932299999999999,
+    "stable_diffusion_v_1_4": 0.514538,
+    "stable_diffusion_v_1_5": 0.538592,
+    "VQDM": 0.6146,
+    "wukong": 0.614662
+  },
+  "rows": [
+    {
+      "method": "semantic_l",
+      "seed": 0,
+      "generator": "ADM",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s0.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.818308,
+        "ap": 0.8346190876653168
+      },
+      "semantic_logit": {
+        "auroc": 0.818308,
+        "ap": 0.8346190876653168
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 0,
+      "generator": "BigGAN",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s0.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.982024,
+        "ap": 0.9851350114890869
+      },
+      "semantic_logit": {
+        "auroc": 0.982024,
+        "ap": 0.9851350114890869
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 0,
+      "generator": "glide",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s0.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.685656,
+        "ap": 0.7160371855533412
+      },
+      "semantic_logit": {
+        "auroc": 0.685656,
+        "ap": 0.7160371855533412
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 0,
+      "generator": "Midjourney",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s0.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.366856,
+        "ap": 0.4248619985069525
+      },
+      "semantic_logit": {
+        "auroc": 0.366856,
+        "ap": 0.4248619985069525
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 0,
+      "generator": "Midjourney",
+      "condition": "jpeg70",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s0.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.42815600000000004,
+        "ap": 0.44788027675156017
+      },
+      "semantic_logit": {
+        "auroc": 0.42815600000000004,
+        "ap": 0.44788027675156017
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 0,
+      "generator": "Midjourney",
+      "condition": "resize_half",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s0.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.40423200000000004,
+        "ap": 0.44060060307293575
+      },
+      "semantic_logit": {
+        "auroc": 0.40423200000000004,
+        "ap": 0.44060060307293575
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 0,
+      "generator": "stable_diffusion_v_1_4",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s0.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.371448,
+        "ap": 0.45683095254261563
+      },
+      "semantic_logit": {
+        "auroc": 0.371448,
+        "ap": 0.45683095254261563
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 0,
+      "generator": "stable_diffusion_v_1_5",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s0.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.334908,
+        "ap": 0.4258435214621163
+      },
+      "semantic_logit": {
+        "auroc": 0.334908,
+        "ap": 0.4258435214621163
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 0,
+      "generator": "stable_diffusion_v_1_5",
+      "condition": "jpeg70",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s0.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.474472,
+        "ap": 0.47949513198434235
+      },
+      "semantic_logit": {
+        "auroc": 0.474472,
+        "ap": 0.47949513198434235
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 0,
+      "generator": "stable_diffusion_v_1_5",
+      "condition": "resize_half",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s0.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.405992,
+        "ap": 0.46174606408992247
+      },
+      "semantic_logit": {
+        "auroc": 0.405992,
+        "ap": 0.46174606408992247
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 0,
+      "generator": "VQDM",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s0.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.765544,
+        "ap": 0.7792933153839537
+      },
+      "semantic_logit": {
+        "auroc": 0.765544,
+        "ap": 0.7792933153839537
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 0,
+      "generator": "wukong",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s0.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.498348,
+        "ap": 0.5429540103776734
+      },
+      "semantic_logit": {
+        "auroc": 0.498348,
+        "ap": 0.5429540103776734
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 1,
+      "generator": "ADM",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s1.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.785608,
+        "ap": 0.8060312473552361
+      },
+      "semantic_logit": {
+        "auroc": 0.785608,
+        "ap": 0.8060312473552361
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 1,
+      "generator": "BigGAN",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s1.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.9782639999999999,
+        "ap": 0.9821173602348159
+      },
+      "semantic_logit": {
+        "auroc": 0.9782639999999999,
+        "ap": 0.9821173602348159
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 1,
+      "generator": "glide",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s1.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.629672,
+        "ap": 0.662978082488251
+      },
+      "semantic_logit": {
+        "auroc": 0.629672,
+        "ap": 0.662978082488251
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 1,
+      "generator": "Midjourney",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s1.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.352224,
+        "ap": 0.4129114230180885
+      },
+      "semantic_logit": {
+        "auroc": 0.352224,
+        "ap": 0.4129114230180885
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 1,
+      "generator": "Midjourney",
+      "condition": "jpeg70",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s1.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.41636000000000006,
+        "ap": 0.4402102498607264
+      },
+      "semantic_logit": {
+        "auroc": 0.41636000000000006,
+        "ap": 0.4402102498607264
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 1,
+      "generator": "Midjourney",
+      "condition": "resize_half",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s1.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.399872,
+        "ap": 0.4340457268176843
+      },
+      "semantic_logit": {
+        "auroc": 0.399872,
+        "ap": 0.4340457268176843
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 1,
+      "generator": "stable_diffusion_v_1_4",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s1.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.32233199999999995,
+        "ap": 0.41580878542801436
+      },
+      "semantic_logit": {
+        "auroc": 0.32233199999999995,
+        "ap": 0.41580878542801436
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 1,
+      "generator": "stable_diffusion_v_1_5",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s1.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.28824400000000006,
+        "ap": 0.39804373633759316
+      },
+      "semantic_logit": {
+        "auroc": 0.28824400000000006,
+        "ap": 0.39804373633759316
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 1,
+      "generator": "stable_diffusion_v_1_5",
+      "condition": "jpeg70",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s1.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.463608,
+        "ap": 0.47646866194274595
+      },
+      "semantic_logit": {
+        "auroc": 0.463608,
+        "ap": 0.47646866194274595
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 1,
+      "generator": "stable_diffusion_v_1_5",
+      "condition": "resize_half",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s1.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.365196,
+        "ap": 0.43451804008940903
+      },
+      "semantic_logit": {
+        "auroc": 0.365196,
+        "ap": 0.43451804008940903
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 1,
+      "generator": "VQDM",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s1.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.71566,
+        "ap": 0.7356565237234144
+      },
+      "semantic_logit": {
+        "auroc": 0.71566,
+        "ap": 0.7356565237234144
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 1,
+      "generator": "wukong",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s1.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.47219200000000006,
+        "ap": 0.5217219637591728
+      },
+      "semantic_logit": {
+        "auroc": 0.47219200000000006,
+        "ap": 0.5217219637591728
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 2,
+      "generator": "ADM",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s2.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.805408,
+        "ap": 0.8260464666022358
+      },
+      "semantic_logit": {
+        "auroc": 0.805408,
+        "ap": 0.8260464666022358
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 2,
+      "generator": "BigGAN",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s2.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.9821160000000001,
+        "ap": 0.9850265170006927
+      },
+      "semantic_logit": {
+        "auroc": 0.9821160000000001,
+        "ap": 0.9850265170006927
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 2,
+      "generator": "glide",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s2.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.6316839999999999,
+        "ap": 0.6719270989650518
+      },
+      "semantic_logit": {
+        "auroc": 0.6316839999999999,
+        "ap": 0.6719270989650518
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 2,
+      "generator": "Midjourney",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s2.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.363904,
+        "ap": 0.4210078922984239
+      },
+      "semantic_logit": {
+        "auroc": 0.363904,
+        "ap": 0.4210078922984239
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 2,
+      "generator": "Midjourney",
+      "condition": "jpeg70",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s2.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.427204,
+        "ap": 0.45150777349796267
+      },
+      "semantic_logit": {
+        "auroc": 0.427204,
+        "ap": 0.45150777349796267
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 2,
+      "generator": "Midjourney",
+      "condition": "resize_half",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s2.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.412416,
+        "ap": 0.44567951181515636
+      },
+      "semantic_logit": {
+        "auroc": 0.412416,
+        "ap": 0.44567951181515636
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 2,
+      "generator": "stable_diffusion_v_1_4",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s2.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.341596,
+        "ap": 0.43493780485475153
+      },
+      "semantic_logit": {
+        "auroc": 0.341596,
+        "ap": 0.43493780485475153
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 2,
+      "generator": "stable_diffusion_v_1_5",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s2.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.318306,
+        "ap": 0.4191018050550684
+      },
+      "semantic_logit": {
+        "auroc": 0.318306,
+        "ap": 0.4191018050550684
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 2,
+      "generator": "stable_diffusion_v_1_5",
+      "condition": "jpeg70",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s2.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.48337600000000003,
+        "ap": 0.4887314860399291
+      },
+      "semantic_logit": {
+        "auroc": 0.48337600000000003,
+        "ap": 0.4887314860399291
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 2,
+      "generator": "stable_diffusion_v_1_5",
+      "condition": "resize_half",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s2.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.403016,
+        "ap": 0.4609150569918352
+      },
+      "semantic_logit": {
+        "auroc": 0.403016,
+        "ap": 0.4609150569918352
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 2,
+      "generator": "VQDM",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s2.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.7235240000000001,
+        "ap": 0.7451213864781395
+      },
+      "semantic_logit": {
+        "auroc": 0.7235240000000001,
+        "ap": 0.7451213864781395
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_l",
+      "seed": 2,
+      "generator": "wukong",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_matchL__semantic__s2.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.5008,
+        "ap": 0.5441004827068434
+      },
+      "semantic_logit": {
+        "auroc": 0.5008,
+        "ap": 0.5441004827068434
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 0,
+      "generator": "ADM",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s0.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.860996,
+        "ap": 0.8835638669825876
+      },
+      "semantic_logit": {
+        "auroc": 0.860996,
+        "ap": 0.8835638669825876
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 0,
+      "generator": "BigGAN",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s0.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.9930519999999999,
+        "ap": 0.9940802630057138
+      },
+      "semantic_logit": {
+        "auroc": 0.9930519999999999,
+        "ap": 0.9940802630057138
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 0,
+      "generator": "glide",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s0.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.714432,
+        "ap": 0.7446299460465807
+      },
+      "semantic_logit": {
+        "auroc": 0.714432,
+        "ap": 0.7446299460465807
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 0,
+      "generator": "Midjourney",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s0.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.388772,
+        "ap": 0.4355122788752047
+      },
+      "semantic_logit": {
+        "auroc": 0.388772,
+        "ap": 0.4355122788752047
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 0,
+      "generator": "Midjourney",
+      "condition": "jpeg70",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s0.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.429088,
+        "ap": 0.4408918446190997
+      },
+      "semantic_logit": {
+        "auroc": 0.429088,
+        "ap": 0.4408918446190997
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 0,
+      "generator": "Midjourney",
+      "condition": "resize_half",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s0.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.43833199999999994,
+        "ap": 0.45426164839573435
+      },
+      "semantic_logit": {
+        "auroc": 0.43833199999999994,
+        "ap": 0.45426164839573435
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 0,
+      "generator": "stable_diffusion_v_1_4",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s0.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.457104,
+        "ap": 0.5123654788296421
+      },
+      "semantic_logit": {
+        "auroc": 0.457104,
+        "ap": 0.5123654788296421
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 0,
+      "generator": "stable_diffusion_v_1_5",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s0.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.423948,
+        "ap": 0.49085054196143324
+      },
+      "semantic_logit": {
+        "auroc": 0.423948,
+        "ap": 0.49085054196143324
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 0,
+      "generator": "stable_diffusion_v_1_5",
+      "condition": "jpeg70",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s0.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.51782,
+        "ap": 0.5187330248795781
+      },
+      "semantic_logit": {
+        "auroc": 0.51782,
+        "ap": 0.5187330248795781
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 0,
+      "generator": "stable_diffusion_v_1_5",
+      "condition": "resize_half",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s0.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.485408,
+        "ap": 0.5158653335738903
+      },
+      "semantic_logit": {
+        "auroc": 0.485408,
+        "ap": 0.5158653335738903
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 0,
+      "generator": "VQDM",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s0.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.8358320000000001,
+        "ap": 0.8603467428993555
+      },
+      "semantic_logit": {
+        "auroc": 0.8358320000000001,
+        "ap": 0.8603467428993555
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 0,
+      "generator": "wukong",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s0.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.5992719999999999,
+        "ap": 0.6419915722954093
+      },
+      "semantic_logit": {
+        "auroc": 0.5992719999999999,
+        "ap": 0.6419915722954093
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 1,
+      "generator": "ADM",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s1.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.848032,
+        "ap": 0.873742211317148
+      },
+      "semantic_logit": {
+        "auroc": 0.848032,
+        "ap": 0.873742211317148
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 1,
+      "generator": "BigGAN",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s1.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.992292,
+        "ap": 0.9935728320830705
+      },
+      "semantic_logit": {
+        "auroc": 0.992292,
+        "ap": 0.9935728320830705
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 1,
+      "generator": "glide",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s1.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.70696,
+        "ap": 0.7428663190662619
+      },
+      "semantic_logit": {
+        "auroc": 0.70696,
+        "ap": 0.7428663190662619
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 1,
+      "generator": "Midjourney",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s1.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.39332,
+        "ap": 0.4385778642882867
+      },
+      "semantic_logit": {
+        "auroc": 0.39332,
+        "ap": 0.4385778642882867
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 1,
+      "generator": "Midjourney",
+      "condition": "jpeg70",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s1.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.44858,
+        "ap": 0.4524973828284663
+      },
+      "semantic_logit": {
+        "auroc": 0.44858,
+        "ap": 0.4524973828284663
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 1,
+      "generator": "Midjourney",
+      "condition": "resize_half",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s1.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.445272,
+        "ap": 0.45985899997853746
+      },
+      "semantic_logit": {
+        "auroc": 0.445272,
+        "ap": 0.45985899997853746
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 1,
+      "generator": "stable_diffusion_v_1_4",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s1.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.47477199999999997,
+        "ap": 0.5221254285627395
+      },
+      "semantic_logit": {
+        "auroc": 0.47477199999999997,
+        "ap": 0.5221254285627395
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 1,
+      "generator": "stable_diffusion_v_1_5",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s1.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.43999999999999995,
+        "ap": 0.49423074185758054
+      },
+      "semantic_logit": {
+        "auroc": 0.43999999999999995,
+        "ap": 0.49423074185758054
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 1,
+      "generator": "stable_diffusion_v_1_5",
+      "condition": "jpeg70",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s1.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.5291759999999999,
+        "ap": 0.5265127819209419
+      },
+      "semantic_logit": {
+        "auroc": 0.5291759999999999,
+        "ap": 0.5265127819209419
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 1,
+      "generator": "stable_diffusion_v_1_5",
+      "condition": "resize_half",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s1.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.49498000000000003,
+        "ap": 0.5201810777613974
+      },
+      "semantic_logit": {
+        "auroc": 0.49498000000000003,
+        "ap": 0.5201810777613974
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 1,
+      "generator": "VQDM",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s1.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.8205560000000001,
+        "ap": 0.8496743762174767
+      },
+      "semantic_logit": {
+        "auroc": 0.8205560000000001,
+        "ap": 0.8496743762174767
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 1,
+      "generator": "wukong",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s1.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.5932679999999999,
+        "ap": 0.638351462377535
+      },
+      "semantic_logit": {
+        "auroc": 0.5932679999999999,
+        "ap": 0.638351462377535
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 2,
+      "generator": "ADM",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s2.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.861608,
+        "ap": 0.882021155108575
+      },
+      "semantic_logit": {
+        "auroc": 0.861608,
+        "ap": 0.882021155108575
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 2,
+      "generator": "BigGAN",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s2.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.992236,
+        "ap": 0.9935730295028826
+      },
+      "semantic_logit": {
+        "auroc": 0.992236,
+        "ap": 0.9935730295028826
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 2,
+      "generator": "glide",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s2.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.709824,
+        "ap": 0.7417036960024836
+      },
+      "semantic_logit": {
+        "auroc": 0.709824,
+        "ap": 0.7417036960024836
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 2,
+      "generator": "Midjourney",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s2.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.379552,
+        "ap": 0.43085548178981137
+      },
+      "semantic_logit": {
+        "auroc": 0.379552,
+        "ap": 0.43085548178981137
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 2,
+      "generator": "Midjourney",
+      "condition": "jpeg70",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s2.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.43357999999999997,
+        "ap": 0.4447776146918338
+      },
+      "semantic_logit": {
+        "auroc": 0.43357999999999997,
+        "ap": 0.4447776146918338
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 2,
+      "generator": "Midjourney",
+      "condition": "resize_half",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s2.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.43982,
+        "ap": 0.4570091080399826
+      },
+      "semantic_logit": {
+        "auroc": 0.43982,
+        "ap": 0.4570091080399826
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 2,
+      "generator": "stable_diffusion_v_1_4",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s2.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.476252,
+        "ap": 0.5277425660929378
+      },
+      "semantic_logit": {
+        "auroc": 0.476252,
+        "ap": 0.5277425660929378
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 2,
+      "generator": "stable_diffusion_v_1_5",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s2.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.435672,
+        "ap": 0.495311888927597
+      },
+      "semantic_logit": {
+        "auroc": 0.435672,
+        "ap": 0.495311888927597
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 2,
+      "generator": "stable_diffusion_v_1_5",
+      "condition": "jpeg70",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s2.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.526212,
+        "ap": 0.5245392003836633
+      },
+      "semantic_logit": {
+        "auroc": 0.526212,
+        "ap": 0.5245392003836633
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 2,
+      "generator": "stable_diffusion_v_1_5",
+      "condition": "resize_half",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s2.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.49218399999999995,
+        "ap": 0.5208368084025903
+      },
+      "semantic_logit": {
+        "auroc": 0.49218399999999995,
+        "ap": 0.5208368084025903
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 2,
+      "generator": "VQDM",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s2.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.8342919999999999,
+        "ap": 0.8567537766629083
+      },
+      "semantic_logit": {
+        "auroc": 0.8342919999999999,
+        "ap": 0.8567537766629083
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 2,
+      "generator": "wukong",
+      "condition": "clean",
+      "n": 1000,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s2.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "fused": {
+        "auroc": 0.611804,
+        "ap": 0.6565150981522382
+      },
+      "semantic_logit": {
+        "auroc": 0.611804,
+        "ap": 0.6565150981522382
+      },
+      "spectral_logit": {
+        "auroc": 0.5,
+        "ap": 0.5
+      },
+      "gate_mean": 1.0,
+      "gate_real_mean": 1.0,
+      "gate_fake_mean": 1.0
+    }
+  ],
+  "summary": {
+    "semantic_l": {
+      "ADM": {
+        "auroc": {
+          "mean": 0.8031079999999999,
+          "sd": 0.01647088340071658,
+          "n": 3
+        },
+        "ap": {
+          "mean": 0.8222322672075962,
+          "sd": 0.014670625111603792,
+          "n": 3
+        }
+      },
+      "BigGAN": {
+        "auroc": {
+          "mean": 0.9808013333333333,
+          "sd": 0.0021978765509768055,
+          "n": 3
+        },
+        "ap": {
+          "mean": 0.9840929629081985,
+          "sd": 0.0017117818803253867,
+          "n": 3
+        }
+      },
+      "glide": {
+        "auroc": {
+          "mean": 0.649004,
+          "sd": 0.03175750090923407,
+          "n": 3
+        },
+        "ap": {
+          "mean": 0.6836474556688813,
+          "sd": 0.028404967443507446,
+          "n": 3
+        }
+      },
+      "Midjourney": {
+        "auroc": {
+          "mean": 0.36099466666666663,
+          "sd": 0.007737701295173755,
+          "n": 3
+        },
+        "ap": {
+          "mean": 0.4195937712744883,
+          "sd": 0.006099497301541489,
+          "n": 3
+        }
+      },
+      "stable_diffusion_v_1_4": {
+        "auroc": {
+          "mean": 0.3451253333333333,
+          "sd": 0.024747474807206783,
+          "n": 3
+        },
+        "ap": {
+          "mean": 0.4358591809417938,
+          "sd": 0.020526598576356934,
+          "n": 3
+        }
+      },
+      "stable_diffusion_v_1_5": {
+        "auroc": {
+          "mean": 0.31381933333333334,
+          "sd": 0.02365332655956306,
+          "n": 3
+        },
+        "ap": {
+          "mean": 0.4143296876182592,
+          "sd": 0.014501270353504814,
+          "n": 3
+        }
+      },
+      "VQDM": {
+        "auroc": {
+          "mean": 0.7349093333333334,
+          "sd": 0.02682019249247353,
+          "n": 3
+        },
+        "ap": {
+          "mean": 0.7533570751951691,
+          "sd": 0.022954570853953835,
+          "n": 3
+        }
+      },
+      "wukong": {
+        "auroc": {
+          "mean": 0.4904466666666667,
+          "sd": 0.01585647241139506,
+          "n": 3
+        },
+        "ap": {
+          "mean": 0.5362588189478965,
+          "sd": 0.012602329895056377,
+          "n": 3
+        }
+      },
+      "macro": {
+        "mean": 0.5847760833333333,
+        "sd": 0.01747067777794652,
+        "n": 3
+      }
+    },
+    "semantic_tc_l": {
+      "ADM": {
+        "auroc": {
+          "mean": 0.8568786666666667,
+          "sd": 0.007667546500239394,
+          "n": 3
+        },
+        "ap": {
+          "mean": 0.8797757444694368,
+          "sd": 0.005281820870342106,
+          "n": 3
+        }
+      },
+      "BigGAN": {
+        "auroc": {
+          "mean": 0.9925266666666667,
+          "sd": 0.0004558128270829029,
+          "n": 3
+        },
+        "ap": {
+          "mean": 0.9937420415305557,
+          "sd": 0.0002929084062250296,
+          "n": 3
+        }
+      },
+      "glide": {
+        "auroc": {
+          "mean": 0.7104053333333334,
+          "sd": 0.00376976887001485,
+          "n": 3
+        },
+        "ap": {
+          "mean": 0.7430666537051088,
+          "sd": 0.0014733754802445872,
+          "n": 3
+        }
+      },
+      "Midjourney": {
+        "auroc": {
+          "mean": 0.38721466666666665,
+          "sd": 0.007014871440969774,
+          "n": 3
+        },
+        "ap": {
+          "mean": 0.4349818749844343,
+          "sd": 0.003888417940332276,
+          "n": 3
+        }
+      },
+      "stable_diffusion_v_1_4": {
+        "auroc": {
+          "mean": 0.469376,
+          "sd": 0.01065359507396446,
+          "n": 3
+        },
+        "ap": {
+          "mean": 0.5207444911617731,
+          "sd": 0.0077809989239681345,
+          "n": 3
+        }
+      },
+      "stable_diffusion_v_1_5": {
+        "auroc": {
+          "mean": 0.4332066666666667,
+          "sd": 0.008305123559185201,
+          "n": 3
+        },
+        "ap": {
+          "mean": 0.4934643909155369,
+          "sd": 0.0023273105750851028,
+          "n": 3
+        }
+      },
+      "VQDM": {
+        "auroc": {
+          "mean": 0.8302266666666668,
+          "sd": 0.008410365350764087,
+          "n": 3
+        },
+        "ap": {
+          "mean": 0.8555916319265803,
+          "sd": 0.005430265917913319,
+          "n": 3
+        }
+      },
+      "wukong": {
+        "auroc": {
+          "mean": 0.6014479999999999,
+          "sd": 0.009457645372924548,
+          "n": 3
+        },
+        "ap": {
+          "mean": 0.6456193776083942,
+          "sd": 0.00960989826588763,
+          "n": 3
+        }
+      },
+      "macro": {
+        "mean": 0.6601603333333333,
+        "sd": 0.0021763938828560877,
+        "n": 3
+      }
+    }
+  },
+  "robustness": {
+    "semantic_l": {
+      "jpeg70": {
+        "Midjourney": {
+          "mean": 0.42390666666666665,
+          "sd": 0.006552916093872477,
+          "n": 3
+        },
+        "stable_diffusion_v_1_5": {
+          "mean": 0.47381866666666667,
+          "sd": 0.009900181277801604,
+          "n": 3
+        },
+        "macro": {
+          "mean": 0.4488626666666667,
+          "sd": 0.007941988751775765,
+          "n": 3
+        }
+      },
+      "resize_half": {
+        "Midjourney": {
+          "mean": 0.4055066666666667,
+          "sd": 0.006368403672297579,
+          "n": 3
+        },
+        "stable_diffusion_v_1_5": {
+          "mean": 0.3914013333333333,
+          "sd": 0.022743213610511,
+          "n": 3
+        },
+        "macro": {
+          "mean": 0.39845400000000003,
+          "sd": 0.013848465763397735,
+          "n": 3
+        }
+      }
+    },
+    "semantic_tc_l": {
+      "jpeg70": {
+        "Midjourney": {
+          "mean": 0.4370826666666667,
+          "sd": 0.010207155398706,
+          "n": 3
+        },
+        "stable_diffusion_v_1_5": {
+          "mean": 0.5244026666666666,
+          "sd": 0.005890241873924455,
+          "n": 3
+        },
+        "macro": {
+          "mean": 0.4807426666666667,
+          "sd": 0.00774677851324877,
+          "n": 3
+        }
+      },
+      "resize_half": {
+        "Midjourney": {
+          "mean": 0.44114133333333333,
+          "sd": 0.003653811890797542,
+          "n": 3
+        },
+        "stable_diffusion_v_1_5": {
+          "mean": 0.4908573333333333,
+          "sd": 0.004921974129689566,
+          "n": 3
+        },
+        "macro": {
+          "mean": 0.4659993333333334,
+          "sd": 0.004128000645994802,
+          "n": 3
+        }
+      }
+    }
+  }
+}

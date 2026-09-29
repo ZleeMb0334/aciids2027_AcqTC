@@ -1,0 +1,75 @@
+{
+  "experiment": "single-GPU inference benchmark",
+  "device": "NVIDIA H100 80GB HBM3",
+  "precision": "float32; autocast disabled",
+  "rows": [
+    {
+      "method": "semantic",
+      "seed": 0,
+      "checkpoint": "ckpt_fs__semantic__s0.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "batch_size": 64,
+      "warmup_iterations": 20,
+      "timed_iterations": 100,
+      "total_ms": 5950.18798828125,
+      "milliseconds_per_image": 0.9297168731689454,
+      "images_per_second": 1075.5962689926173,
+      "peak_allocated_bytes": 1076942336
+    },
+    {
+      "method": "semantic_tc",
+      "seed": 0,
+      "checkpoint": "ckpt_semtc__semantic_tc__s0.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "batch_size": 64,
+      "warmup_iterations": 20,
+      "timed_iterations": 100,
+      "total_ms": 5951.1796875,
+      "milliseconds_per_image": 0.929871826171875,
+      "images_per_second": 1075.4170325998916,
+      "peak_allocated_bytes": 1076942336
+    },
+    {
+      "method": "gate_full",
+      "seed": 0,
+      "checkpoint": "ckpt_gatefull__gate_full__s0.pt",
+      "config": {
+        "arch": "ViT-B-16-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "batch_size": 64,
+      "warmup_iterations": 20,
+      "timed_iterations": 100,
+      "total_ms": 6535.38671875,
+      "milliseconds_per_image": 1.0211541748046875,
+      "images_per_second": 979.2840539395204,
+      "peak_allocated_bytes": 1229064704
+    },
+    {
+      "method": "semantic_tc_l",
+      "seed": 0,
+      "checkpoint": "ckpt_acqtcl__semantic_tc__s0.pt",
+      "config": {
+        "arch": "ViT-L-14-quickgelu",
+        "tune": "ln",
+        "size": 224
+      },
+      "batch_size": 64,
+      "warmup_iterations": 20,
+      "timed_iterations": 100,
+      "total_ms": 24057.76953125,
+      "milliseconds_per_image": 3.7590264892578125,
+      "images_per_second": 266.02632433096835,
+      "peak_allocated_bytes": 2409668096
+    }
+  ]
+}

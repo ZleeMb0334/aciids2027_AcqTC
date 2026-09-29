@@ -1,0 +1,126 @@
+[
+ {
+  "method": "semantic_aug",
+  "seed": 2,
+  "trainable": 171521,
+  "params": 86324225,
+  "trainable_pct": 0.1986939355667543,
+  "breakdown": {
+   "ln_affine": 39936,
+   "backbone_total": 86192640,
+   "ln_pct_of_backbone": 0.046333422436068784,
+   "sem_head": 131585,
+   "noise_branch": 292993,
+   "fusion": 0
+  },
+  "train_s": 1150.4057714939117,
+  "evaluation_profile": "transfer+jpeg70+resize",
+  "per_generator": {
+   "progan": {
+    "auroc": 1.0,
+    "ap": 1.0,
+    "shortcut_auroc": 0.4736
+   },
+   "deepfake": {
+    "auroc": 0.859003,
+    "ap": 0.8605861092310328,
+    "shortcut_auroc": 0.5184
+   },
+   "biggan": {
+    "auroc": 0.97773,
+    "ap": 0.9782319872370241,
+    "shortcut_auroc": 0.521
+   },
+   "gaugan": {
+    "auroc": 0.998254,
+    "ap": 0.9978858831866374,
+    "shortcut_auroc": 0.544
+   },
+   "cyclegan": {
+    "auroc": 0.9880000000000001,
+    "ap": 0.9883074623371011,
+    "shortcut_auroc": 0.6308
+   },
+   "stylegan": {
+    "auroc": 0.9845430000000001,
+    "ap": 0.9858223845624611,
+    "shortcut_auroc": 0.6396
+   }
+  },
+  "auroc_macro": 0.9679216666666668,
+  "auroc_progan": 1.0,
+  "auroc_unseen_macro": 0.961506,
+  "gap": 0.03849400000000003,
+  "a4_jpeg70_auroc": 0.926056,
+  "a4_jpeg70_psnr": 32.9586067199707,
+  "a4_resize_auroc": 0.98878,
+  "a4_resize_psnr": 25.965839385986328,
+  "H_w": 4.041721194641038,
+  "H_max": 4.1588830833596715,
+  "instantiated_trainable": 464514,
+  "instantiated_params": 86617218,
+  "parameter_scope": "active semantic deployment path"
+ },
+ {
+  "method": "semantic_align",
+  "seed": 2,
+  "trainable": 171521,
+  "params": 86324225,
+  "trainable_pct": 0.1986939355667543,
+  "breakdown": {
+   "ln_affine": 39936,
+   "backbone_total": 86192640,
+   "ln_pct_of_backbone": 0.046333422436068784,
+   "sem_head": 131585,
+   "noise_branch": 292993,
+   "fusion": 0
+  },
+  "train_s": 1089.4971957206726,
+  "evaluation_profile": "transfer+jpeg70+resize",
+  "per_generator": {
+   "progan": {
+    "auroc": 0.999999,
+    "ap": 0.999999000999001,
+    "shortcut_auroc": 0.4736
+   },
+   "deepfake": {
+    "auroc": 0.883842,
+    "ap": 0.8911132652652776,
+    "shortcut_auroc": 0.5184
+   },
+   "biggan": {
+    "auroc": 0.979326,
+    "ap": 0.979965254435824,
+    "shortcut_auroc": 0.521
+   },
+   "gaugan": {
+    "auroc": 0.998672,
+    "ap": 0.9982786706908832,
+    "shortcut_auroc": 0.544
+   },
+   "cyclegan": {
+    "auroc": 0.990911,
+    "ap": 0.9909496600242788,
+    "shortcut_auroc": 0.6308
+   },
+   "stylegan": {
+    "auroc": 0.9851880000000001,
+    "ap": 0.9863110274791699,
+    "shortcut_auroc": 0.6396
+   }
+  },
+  "auroc_macro": 0.9729896666666665,
+  "auroc_progan": 0.999999,
+  "auroc_unseen_macro": 0.9675878000000001,
+  "gap": 0.03241119999999986,
+  "a4_jpeg70_auroc": 0.9715199999999999,
+  "a4_jpeg70_psnr": 32.9586067199707,
+  "a4_resize_auroc": 0.994572,
+  "a4_resize_psnr": 25.965839385986328,
+  "H_w": 3.98615349333868,
+  "H_max": 4.1588830833596715,
+  "instantiated_trainable": 464514,
+  "instantiated_params": 86617218,
+  "parameter_scope": "active semantic deployment path"
+ }
+]

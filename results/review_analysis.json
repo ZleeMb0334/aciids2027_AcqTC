@@ -1,0 +1,173 @@
+{
+  "cutoff_sensitivity": [
+    {
+      "cutoff": 0.6,
+      "retained": [
+        "biggan",
+        "deepfake",
+        "gaugan",
+        "progan"
+      ],
+      "retained_count": 4,
+      "unseen": [
+        "biggan",
+        "deepfake",
+        "gaugan"
+      ],
+      "unseen_count": 3,
+      "methods": {
+        "semantic": {
+          "mean": 0.9408265555555556,
+          "sd": 0.004979142857218677,
+          "n": 3
+        },
+        "semantic_tc": {
+          "mean": 0.9607597777777777,
+          "sd": 0.0023598100284494593,
+          "n": 3
+        }
+      },
+      "semantic_tc_minus_semantic": 0.019933222222222047
+    },
+    {
+      "cutoff": 0.7,
+      "retained": [
+        "biggan",
+        "cyclegan",
+        "deepfake",
+        "gaugan",
+        "progan",
+        "stylegan"
+      ],
+      "retained_count": 6,
+      "unseen": [
+        "biggan",
+        "cyclegan",
+        "deepfake",
+        "gaugan",
+        "stylegan"
+      ],
+      "unseen_count": 5,
+      "methods": {
+        "semantic": {
+          "mean": 0.9571995333333332,
+          "sd": 0.003955369870610455,
+          "n": 3
+        },
+        "semantic_tc": {
+          "mean": 0.972334,
+          "sd": 0.0017272789236253683,
+          "n": 3
+        }
+      },
+      "semantic_tc_minus_semantic": 0.015134466666666846
+    },
+    {
+      "cutoff": 0.8,
+      "retained": [
+        "biggan",
+        "cyclegan",
+        "deepfake",
+        "gaugan",
+        "progan",
+        "stylegan"
+      ],
+      "retained_count": 6,
+      "unseen": [
+        "biggan",
+        "cyclegan",
+        "deepfake",
+        "gaugan",
+        "stylegan"
+      ],
+      "unseen_count": 5,
+      "methods": {
+        "semantic": {
+          "mean": 0.9571995333333332,
+          "sd": 0.003955369870610455,
+          "n": 3
+        },
+        "semantic_tc": {
+          "mean": 0.972334,
+          "sd": 0.0017272789236253683,
+          "n": 3
+        }
+      },
+      "semantic_tc_minus_semantic": 0.015134466666666846
+    }
+  ],
+  "fusion_forms": [
+    {
+      "method": "mean",
+      "unseen_auroc": {
+        "mean": 0.8739261,
+        "sd": 0.0007612711606253467,
+        "n": 2
+      },
+      "jpeg70_auroc": {
+        "mean": 0.8579800000000001,
+        "sd": 0.002573868683519095,
+        "n": 2
+      },
+      "resize_auroc": {
+        "mean": 0.8005859999999999,
+        "sd": 0.024378213388187377,
+        "n": 2
+      }
+    },
+    {
+      "method": "static",
+      "unseen_auroc": {
+        "mean": 0.8510295,
+        "sd": 0.011877838289015369,
+        "n": 2
+      },
+      "jpeg70_auroc": {
+        "mean": 0.8371439999999999,
+        "sd": 0.0005374011537018426,
+        "n": 2
+      },
+      "resize_auroc": {
+        "mean": 0.702168,
+        "sd": 0.05426620281538035,
+        "n": 2
+      }
+    },
+    {
+      "method": "concat",
+      "unseen_auroc": {
+        "mean": 0.9575816,
+        "sd": 0.004808602695170495,
+        "n": 3
+      },
+      "jpeg70_auroc": {
+        "mean": 0.9132973333333333,
+        "sd": 0.0019819599726868683,
+        "n": 3
+      },
+      "resize_auroc": {
+        "mean": 0.9420426666666666,
+        "sd": 0.01333390045460562,
+        "n": 3
+      }
+    },
+    {
+      "method": "gate",
+      "unseen_auroc": {
+        "mean": 0.9582608,
+        "sd": 0.0020769038205944294,
+        "n": 3
+      },
+      "jpeg70_auroc": {
+        "mean": 0.9207519999999999,
+        "sd": 0.004621450854439562,
+        "n": 3
+      },
+      "resize_auroc": {
+        "mean": 0.7850993333333333,
+        "sd": 0.14501294944015636,
+        "n": 3
+      }
+    }
+  ]
+}

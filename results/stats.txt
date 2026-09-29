@@ -1,0 +1,32 @@
+=== ViT-L/14 block ===
+  gate_full      n=2  mean=0.9911  sd=0.0005
+  semantic       n=1  mean=0.9862  sd=nan
+=== ViT-B/16 linear probe ===
+  semantic       n=1  mean=0.9143  sd=nan
+=== ViT-B/16 block (unseen macro over seeds) ===
+  cnndetection   n=3  mean=0.8999  sd=0.0015
+  concat         n=1  mean=0.9579  sd=nan
+  gate           n=3  mean=0.9583  sd=0.0021
+  gate_full      n=3  mean=0.9605  sd=0.0016
+  gate_robust    n=3  mean=0.9498  sd=0.0038
+  gate_srr       n=3  mean=0.9462  sd=0.0025
+  mean           n=1  mean=0.8734  sd=nan
+  noise          n=3  mean=0.6854  sd=0.0175
+  npr            n=3  mean=0.7946  sd=0.0588
+  semantic       n=3  mean=0.9572  sd=0.0040
+  static         n=1  mean=0.8426  sd=nan
+  ufd            n=3  mean=0.9672  sd=0.0007
+
+=== paired unseen-macro differences by seed, ViT-B/16 block ===
+  gate_full   vs semantic     : n=3 mean=+0.0033 sd=0.0024 range=[+0.0008,+0.0056]
+  gate        vs semantic     : n=3 mean=+0.0011 sd=0.0053 range=[-0.0049,+0.0051]
+  gate_full   vs gate         : n=3 mean=+0.0022 sd=0.0030 range=[+0.0005,+0.0056]
+  gate_full   vs gate_robust  : n=3 mean=+0.0107 sd=0.0029 range=[+0.0076,+0.0134]
+  gate_srr    vs gate_robust  : n=3 mean=-0.0037 sd=0.0044 range=[-0.0076,+0.0010]
+  gate        vs concat       : insufficient paired seeds (n=1)
+  gate        vs static       : insufficient paired seeds (n=1)
+  gate        vs mean         : insufficient paired seeds (n=1)
+  semantic    vs cnndetection : n=3 mean=+0.0573 sd=0.0051 range=[+0.0528,+0.0628]
+
+=== paired within the ViT-L/14 block ===
+  gate_full   vs semantic     : insufficient paired seeds (n=1)
